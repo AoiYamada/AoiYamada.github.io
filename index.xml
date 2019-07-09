@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>K-Lab</title>
-    <link>https://AoiYamada.github.io/</link>
+    <link>https://aoiyamada.github.io/</link>
     <description>Recent content on K-Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     
-	<atom:link href="https://AoiYamada.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aoiyamada.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
