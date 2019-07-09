@@ -1,2 +1,2 @@
 
-Copyright (C) 2019 Aoi
+Copyright (C) 2019 AoiYamada
