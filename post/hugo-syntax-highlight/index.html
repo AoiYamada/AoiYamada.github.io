@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 
 <head>
-  <title>安裝Hugo紀錄 // Wagnaria</title>
+  <title>Hugo Syntax Highlight by Highlight.js 設定紀錄 // Wagnaria</title>
   <meta charset="utf-8" />
   <meta name="generator" content="Hugo 0.55.6" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -54,37 +54,19 @@
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="安裝Hugo紀錄"/>
-<meta name="twitter:description" content="Step 1: For window: choco install hugo-extended  For Ubuntu: snap install hugo --channel=extended  用snap是因為目前apt-get的安裝方式，就算apt已是最update，還是只裝得到v0.40，但一些Theme需要新版本的Hugo(v0.55)。這方法安裝的話，hugo指令的讀寫權限會限制在/home/{user}/的目錄下。而Extend是因為Theme要用SCSS。
-安裝完成後打開Terminal檢查版本：
-hugo version  顯示Hugo Static Site Generator v0.55.6/extended表示成功安裝。
-Step 2: 新增網站
-hugo new site {PathToFolder} cd {PathToFolder}  Step 3: 新增文章
-hugo new post/{FileName}.md  在{PathToFolder}/content/post/{FileName}.md
-Step 4: Render
-hugo  輸出的檔案在{PathToFolder}/public
-Step 5: Git上傳public這個folder
-Notes: 主題一覧
-Hugo Tag 設定教學
-其他設定教學"/>
+<meta name="twitter:title" content="Hugo Syntax Highlight by Highlight.js 設定紀錄"/>
+<meta name="twitter:description" content="Step 1: 新增/layout/partials/Highlight-js.html
+&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css&quot; rel=&quot;stylesheet&quot; /&gt; &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js&quot;&gt;&lt;/script&gt; &lt;script&gt; hljs.initHighlightingOnLoad(); &lt;/script&gt;  Step 2: 在header中加入
+{{ partial &quot;Highlight-js.html&quot; }}  其中css的cdn可以換成不同風格的"/>
 
-  <meta property="og:title" content="安裝Hugo紀錄" />
-<meta property="og:description" content="Step 1: For window: choco install hugo-extended  For Ubuntu: snap install hugo --channel=extended  用snap是因為目前apt-get的安裝方式，就算apt已是最update，還是只裝得到v0.40，但一些Theme需要新版本的Hugo(v0.55)。這方法安裝的話，hugo指令的讀寫權限會限制在/home/{user}/的目錄下。而Extend是因為Theme要用SCSS。
-安裝完成後打開Terminal檢查版本：
-hugo version  顯示Hugo Static Site Generator v0.55.6/extended表示成功安裝。
-Step 2: 新增網站
-hugo new site {PathToFolder} cd {PathToFolder}  Step 3: 新增文章
-hugo new post/{FileName}.md  在{PathToFolder}/content/post/{FileName}.md
-Step 4: Render
-hugo  輸出的檔案在{PathToFolder}/public
-Step 5: Git上傳public這個folder
-Notes: 主題一覧
-Hugo Tag 設定教學
-其他設定教學" />
+  <meta property="og:title" content="Hugo Syntax Highlight by Highlight.js 設定紀錄" />
+<meta property="og:description" content="Step 1: 新增/layout/partials/Highlight-js.html
+&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css&quot; rel=&quot;stylesheet&quot; /&gt; &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js&quot;&gt;&lt;/script&gt; &lt;script&gt; hljs.initHighlightingOnLoad(); &lt;/script&gt;  Step 2: 在header中加入
+{{ partial &quot;Highlight-js.html&quot; }}  其中css的cdn可以換成不同風格的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://aoiyamada.github.io/post/hugo-installation-on-ubuntu-18/" />
-<meta property="article:published_time" content="2019-07-09T22:58:37&#43;08:00"/>
-<meta property="article:modified_time" content="2019-07-09T22:58:37&#43;08:00"/>
+<meta property="og:url" content="https://aoiyamada.github.io/post/hugo-syntax-highlight/" />
+<meta property="article:published_time" content="2019-07-12T22:42:16&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-12T22:42:16&#43;08:00"/>
 
 
 </head>
@@ -151,7 +133,7 @@ Hugo Tag 設定教學
     
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">安裝Hugo紀錄</h1>
+    <h1 class="post-title">Hugo Syntax Highlight by Highlight.js 設定紀錄</h1>
     <div class="post-meta">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -159,7 +141,7 @@ Hugo Tag 設定教學
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-        Jul 9, 2019
+        Jul 12, 2019
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -174,7 +156,7 @@ Hugo Tag 設定教學
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
-        <a class="tag" href="https://aoiyamada.github.io/tags/hugo/">hugo</a><a class="tag" href="https://aoiyamada.github.io/tags/ubuntu/">ubuntu</a><a class="tag" href="https://aoiyamada.github.io/tags/window/">window</a></div></div>
+        <a class="tag" href="https://aoiyamada.github.io/tags/hugo/">hugo</a><a class="tag" href="https://aoiyamada.github.io/tags/hightlight.js/">hightlight.js</a></div></div>
     <div class="share-buttons">
       
 
@@ -273,21 +255,21 @@ Hugo Tag 設定教學
 
 <div id="share-buttons">
   <div class="facebook" title="Share this on Facebook"
-    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/\/post\/hugo-installation-on-ubuntu-18\/');">
+    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
     </svg>
   </div>
   <div class="twitter" title="Share this on Twitter"
-    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/\/post\/hugo-installation-on-ubuntu-18\/');">
+    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
     </svg>
   </div>
   <div class="linkedin" title="Share this on Linkedin"
-    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/\/post\/hugo-installation-on-ubuntu-18\/&title=&summary=&source=');">
+    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/&title=&summary=&source=');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
@@ -295,7 +277,7 @@ Hugo Tag 設定教學
   </div>
   
   <div class="mail" title="Share this through Email"
-    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/\/post\/hugo-installation-on-ubuntu-18\/');">
+    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z" />
@@ -309,62 +291,24 @@ Hugo Tag 設定教學
 
 <h2 id="step-1">Step 1:</h2>
 
-<h2 id="for-window">For window:</h2>
+<p>新增<strong>/layout/partials/Highlight-js.html</strong></p>
 
-<pre><code class="language-sh">choco install hugo-extended
+<pre><code class="language-html">&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  hljs.initHighlightingOnLoad();
+&lt;/script&gt;
+
 </code></pre>
-
-<h2 id="for-ubuntu">For Ubuntu:</h2>
-
-<pre><code class="language-sh">snap install hugo --channel=extended
-</code></pre>
-
-<p>用snap是因為目前apt-get的安裝方式，就算apt已是最update，還是只裝得到v0.40，但一些Theme需要新版本的Hugo(v0.55)。這方法安裝的話，hugo指令的讀寫權限會限制在<strong>/home/{user}/</strong>的目錄下。而Extend是因為Theme要用SCSS。</p>
-
-<p>安裝完成後打開Terminal檢查版本：</p>
-
-<pre><code class="language-sh">hugo version
-</code></pre>
-
-<p>顯示<strong>Hugo Static Site Generator v0.55.6/extended</strong>表示成功安裝。</p>
 
 <h2 id="step-2">Step 2:</h2>
 
-<p>新增網站</p>
+<p>在header中加入</p>
 
-<pre><code class="language-sh">hugo new site {PathToFolder}
-cd {PathToFolder}
+<pre><code class="language-html">{{ partial &quot;Highlight-js.html&quot; }}
 </code></pre>
 
-<h2 id="step-3">Step 3:</h2>
-
-<p>新增文章</p>
-
-<pre><code class="language-sh">hugo new post/{FileName}.md
-</code></pre>
-
-<p>在<strong>{PathToFolder}/content/post/{FileName}.md</strong></p>
-
-<h2 id="step-4">Step 4:</h2>
-
-<p>Render</p>
-
-<pre><code class="language-sh">hugo
-</code></pre>
-
-<p>輸出的檔案在<strong>{PathToFolder}/public</strong></p>
-
-<h2 id="step-5">Step 5:</h2>
-
-<p>Git上傳public這個folder</p>
-
-<h2 id="notes">Notes:</h2>
-
-<p><a href="https://themes.gohugo.io/">主題一覧</a></p>
-
-<p><a href="https://note.qidong.name/2017/10/hugo-taxonomy/">Hugo Tag 設定教學</a></p>
-
-<p><a href="https://carrie-lai.github.io/post/createhugoblog/">其他設定教學</a></p>
+<p>其中css的cdn可以換成不同風格的</p>
 
   </div>
   <div class="share-buttons">
@@ -465,21 +409,21 @@ cd {PathToFolder}
 
 <div id="share-buttons">
   <div class="facebook" title="Share this on Facebook"
-    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/\/post\/hugo-installation-on-ubuntu-18\/');">
+    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
     </svg>
   </div>
   <div class="twitter" title="Share this on Twitter"
-    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/\/post\/hugo-installation-on-ubuntu-18\/');">
+    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
     </svg>
   </div>
   <div class="linkedin" title="Share this on Linkedin"
-    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/\/post\/hugo-installation-on-ubuntu-18\/&title=&summary=&source=');">
+    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/&title=&summary=&source=');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
@@ -487,7 +431,7 @@ cd {PathToFolder}
   </div>
   
   <div class="mail" title="Share this through Email"
-    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/\/post\/hugo-installation-on-ubuntu-18\/');">
+    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z" />

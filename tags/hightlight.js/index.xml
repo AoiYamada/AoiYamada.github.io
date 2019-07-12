@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hightlight.js on Wagnaria</title>
+    <link>https://aoiyamada.github.io/tags/hightlight.js/</link>
+    <description>Recent content in hightlight.js on Wagnaria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 12 Jul 2019 22:42:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://aoiyamada.github.io/tags/hightlight.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo Syntax Highlight by Highlight.js 設定紀錄</title>
+      <link>https://aoiyamada.github.io/post/hugo-syntax-highlight/</link>
+      <pubDate>Fri, 12 Jul 2019 22:42:16 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/post/hugo-syntax-highlight/</guid>
+      <description>Step 1: 新增/layout/partials/Highlight-js.html
+&amp;lt;link href=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot; /&amp;gt; &amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; hljs.initHighlightingOnLoad(); &amp;lt;/script&amp;gt;  Step 2: 在header中加入
+{{ partial &amp;quot;Highlight-js.html&amp;quot; }}  其中css的cdn可以換成不同風格的</description>
+    </item>
+    
+  </channel>
+</rss>
