@@ -6,10 +6,21 @@
     <description>Recent content in hugo on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 09 Jul 2019 22:58:37 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 01:36:18 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Set Latex on Hugo 紀錄</title>
+      <link>https://aoiyamada.github.io/post/set-latex-on-hugo/</link>
+      <pubDate>Fri, 12 Jul 2019 01:36:18 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/post/set-latex-on-hugo/</guid>
+      <description>$$ \begin{align} \int^{1}_{0}\int^{\sqrt{1-y^2}}_{0}\int^{\sqrt{x^2+y^2}}_{x^2+y^2} xyz dz dx dy &amp;amp;= \int^{\frac{\pi}{2}}_{0}\int^{1}_{0}\int^{r}_{r^2} r^2z \sin{\theta}\cos{\theta} dz \cdot rdr d\theta \newline &amp;amp;= \frac{1}{2}\int^{1}_{0} r^5-r^7 dr \cdot \int^{\frac{\pi}{2}}_{0}\sin{\theta}\cos{\theta} d\theta \newline &amp;amp;= \frac{1}{2} \left[ \frac{1}{6}r^6 - \frac{1}{8}r^8 \right]^{1}_{0} \cdot \int^{0}_{\frac{\pi}{2}}\cos{\theta} d\cos{\theta} \newline &amp;amp;= \frac{1}{4}\cdot \left[ \frac{1}{6} - \frac{1}{8} \right] \newline &amp;amp;= \frac{1}{96} \end{align} $$
+Step 1: 新增/layouts/partials/MathJax.js
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML&amp;quot; async&amp;gt; MathJax.Hub.Config({ tex2jax: { inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]], displayMath: [[&#39;$$&#39;, &#39;$$&#39;], [&#39;\[&#39;, &#39;\]&#39;]], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: { autoNumber: &amp;quot;AMS&amp;quot; }, extensions: [&amp;quot;AMSmath.</description>
+    </item>
     
     <item>
       <title>安裝Hugo紀錄</title>

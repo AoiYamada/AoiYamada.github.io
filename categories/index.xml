@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 10 Jul 2019 01:28:36 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 01:36:18 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lab</title>
+      <link>https://aoiyamada.github.io/categories/lab/</link>
+      <pubDate>Fri, 12 Jul 2019 01:36:18 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/categories/lab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>https://aoiyamada.github.io/categories/latex/</link>
+      <pubDate>Fri, 12 Jul 2019 01:36:18 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/categories/latex/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MySQL</title>
@@ -26,15 +44,6 @@
       <pubDate>Wed, 10 Jul 2019 01:28:36 +0800</pubDate>
       
       <guid>https://aoiyamada.github.io/categories/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lab</title>
-      <link>https://aoiyamada.github.io/categories/lab/</link>
-      <pubDate>Tue, 09 Jul 2019 22:58:37 +0800</pubDate>
-      
-      <guid>https://aoiyamada.github.io/categories/lab/</guid>
       <description></description>
     </item>
     

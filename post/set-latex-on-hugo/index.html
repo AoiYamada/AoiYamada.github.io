@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 
 <head>
-  <title>Mysql Insert Trigger Notes // Wagnaria</title>
+  <title>Set Latex on Hugo 紀錄 // Wagnaria</title>
   <meta charset="utf-8" />
   <meta name="generator" content="Hugo 0.55.6" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -54,21 +54,19 @@
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Mysql Insert Trigger Notes"/>
-<meta name="twitter:description" content="INSERT一筆資料前TRIGGER事件 例如將新增的ROW的其中一個FIELD設成AUTO_INCREMENT
-CREATE TRIGGER `priority_trigger` BEFORE INSERT ON `banner` FOR EACH ROW SET NEW.priority = IFNULL(( SELECT `AUTO_INCREMENT` FROM `information_schema`.`TABLES` WHERE `TABLE_SCHEMA` = &#39;schema&#39; AND `TABLE_NAME` = &#39;table&#39; ), 1);  檢視TRIGGERS SHOW TRIGGERS;  注意:
-TRIGGER是平行運行的, 做多行輸入時,
-上面的NEW.priority可能會發生一些奇怪問題。"/>
+<meta name="twitter:title" content="Set Latex on Hugo 紀錄"/>
+<meta name="twitter:description" content="$$ \begin{align} \int^{1}_{0}\int^{\sqrt{1-y^2}}_{0}\int^{\sqrt{x^2&#43;y^2}}_{x^2&#43;y^2} xyz dz dx dy &amp;= \int^{\frac{\pi}{2}}_{0}\int^{1}_{0}\int^{r}_{r^2} r^2z \sin{\theta}\cos{\theta} dz \cdot rdr d\theta \newline &amp;= \frac{1}{2}\int^{1}_{0} r^5-r^7 dr \cdot \int^{\frac{\pi}{2}}_{0}\sin{\theta}\cos{\theta} d\theta \newline &amp;= \frac{1}{2} \left[ \frac{1}{6}r^6 - \frac{1}{8}r^8 \right]^{1}_{0} \cdot \int^{0}_{\frac{\pi}{2}}\cos{\theta} d\cos{\theta} \newline &amp;= \frac{1}{4}\cdot \left[ \frac{1}{6} - \frac{1}{8} \right] \newline &amp;= \frac{1}{96} \end{align} $$
+Step 1: 新增/layouts/partials/MathJax.js
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML&quot; async&gt; MathJax.Hub.Config({ tex2jax: { inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]], displayMath: [[&#39;$$&#39;, &#39;$$&#39;], [&#39;\[&#39;, &#39;\]&#39;]], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; }, extensions: [&quot;AMSmath."/>
 
-  <meta property="og:title" content="Mysql Insert Trigger Notes" />
-<meta property="og:description" content="INSERT一筆資料前TRIGGER事件 例如將新增的ROW的其中一個FIELD設成AUTO_INCREMENT
-CREATE TRIGGER `priority_trigger` BEFORE INSERT ON `banner` FOR EACH ROW SET NEW.priority = IFNULL(( SELECT `AUTO_INCREMENT` FROM `information_schema`.`TABLES` WHERE `TABLE_SCHEMA` = &#39;schema&#39; AND `TABLE_NAME` = &#39;table&#39; ), 1);  檢視TRIGGERS SHOW TRIGGERS;  注意:
-TRIGGER是平行運行的, 做多行輸入時,
-上面的NEW.priority可能會發生一些奇怪問題。" />
+  <meta property="og:title" content="Set Latex on Hugo 紀錄" />
+<meta property="og:description" content="$$ \begin{align} \int^{1}_{0}\int^{\sqrt{1-y^2}}_{0}\int^{\sqrt{x^2&#43;y^2}}_{x^2&#43;y^2} xyz dz dx dy &amp;= \int^{\frac{\pi}{2}}_{0}\int^{1}_{0}\int^{r}_{r^2} r^2z \sin{\theta}\cos{\theta} dz \cdot rdr d\theta \newline &amp;= \frac{1}{2}\int^{1}_{0} r^5-r^7 dr \cdot \int^{\frac{\pi}{2}}_{0}\sin{\theta}\cos{\theta} d\theta \newline &amp;= \frac{1}{2} \left[ \frac{1}{6}r^6 - \frac{1}{8}r^8 \right]^{1}_{0} \cdot \int^{0}_{\frac{\pi}{2}}\cos{\theta} d\cos{\theta} \newline &amp;= \frac{1}{4}\cdot \left[ \frac{1}{6} - \frac{1}{8} \right] \newline &amp;= \frac{1}{96} \end{align} $$
+Step 1: 新增/layouts/partials/MathJax.js
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML&quot; async&gt; MathJax.Hub.Config({ tex2jax: { inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]], displayMath: [[&#39;$$&#39;, &#39;$$&#39;], [&#39;\[&#39;, &#39;\]&#39;]], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; }, extensions: [&quot;AMSmath." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://aoiyamada.github.io/post/mysql-insert-trigger-notes/" />
-<meta property="article:published_time" content="2019-07-10T01:28:36&#43;08:00"/>
-<meta property="article:modified_time" content="2019-07-10T01:28:36&#43;08:00"/>
+<meta property="og:url" content="https://aoiyamada.github.io/post/set-latex-on-hugo/" />
+<meta property="article:published_time" content="2019-07-12T01:36:18&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-12T01:36:18&#43;08:00"/>
 
 
 </head>
@@ -131,7 +129,7 @@ TRIGGER是平行運行的, 做多行輸入時,
     
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">Mysql Insert Trigger Notes</h1>
+    <h1 class="post-title">Set Latex on Hugo 紀錄</h1>
     <div class="post-meta">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -139,7 +137,7 @@ TRIGGER是平行運行的, 做多行輸入時,
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-        Jul 10, 2019
+        Jul 12, 2019
       </div>
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -154,7 +152,7 @@ TRIGGER是平行運行的, 做多行輸入時,
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
-        <a class="tag" href="https://aoiyamada.github.io/tags/mysql/">mysql</a><a class="tag" href="https://aoiyamada.github.io/tags/trigger/">trigger</a></div></div>
+        <a class="tag" href="https://aoiyamada.github.io/tags/hugo/">hugo</a><a class="tag" href="https://aoiyamada.github.io/tags/latex/">latex</a></div></div>
     <div class="share-buttons">
       
 
@@ -287,36 +285,75 @@ TRIGGER是平行運行的, 做多行輸入時,
   <div class="post-content">
     
 
-<h2 id="insert一筆資料前trigger事件">INSERT一筆資料前TRIGGER事件</h2>
+<p>$$
+\begin{align}
+\int^{1}_{0}\int^{\sqrt{1-y^2}}_{0}\int^{\sqrt{x^2+y^2}}_{x^2+y^2} xyz dz dx dy
+&amp;= \int^{\frac{\pi}{2}}_{0}\int^{1}_{0}\int^{r}_{r^2} r^2z \sin{\theta}\cos{\theta} dz  \cdot rdr d\theta \newline
+&amp;= \frac{1}{2}\int^{1}_{0} r^5-r^7 dr \cdot \int^{\frac{\pi}{2}}_{0}\sin{\theta}\cos{\theta} d\theta \newline
+&amp;= \frac{1}{2} \left[ \frac{1}{6}r^6 - \frac{1}{8}r^8 \right]^{1}_{0} \cdot \int^{0}_{\frac{\pi}{2}}\cos{\theta} d\cos{\theta} \newline
+&amp;= \frac{1}{4}\cdot \left[ \frac{1}{6} - \frac{1}{8} \right] \newline
+&amp;= \frac{1}{96}
+\end{align}
+$$</p>
 
-<p>例如將新增的ROW的其中一個FIELD設成AUTO_INCREMENT</p>
+<h2 id="step-1">Step 1:</h2>
 
-<pre><code class="language-SQL">CREATE TRIGGER 
-	`priority_trigger` 
-BEFORE INSERT ON 
-	`banner` 
-FOR EACH ROW SET 
-    NEW.priority = IFNULL((
-		SELECT 
-			`AUTO_INCREMENT`
-		FROM
-			`information_schema`.`TABLES`
-		WHERE
-			`TABLE_SCHEMA` = 'schema'
-				AND `TABLE_NAME` = 'table'
-	), 1);
+<p>新增<strong>/layouts/partials/MathJax.js</strong></p>
+
+<pre><code class="language-html">&lt;script type=&quot;text/javascript&quot;
+  src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML&quot; async&gt;
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\[', '\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: {
+          equationNumbers: { autoNumber: &quot;AMS&quot; },
+          extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;]
+        }
+      }
+    });
+    MathJax.Hub.Queue(function () {
+      // Fix &lt;code&gt; tags after MathJax finishes running. This is a
+      // hack to overcome a shortcoming of Markdown. Discussion at
+      // https://github.com/mojombo/jekyll/issues/199
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i &lt; all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  &lt;/script&gt;
+&lt;style&gt;
+  code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+  }
+&lt;/style&gt;
 </code></pre>
 
-<h2 id="檢視triggers">檢視TRIGGERS</h2>
+<h2 id="step-2">Step 2:</h2>
 
-<pre><code class="language-SQL">SHOW TRIGGERS;
+<p>在外框layout的header加入</p>
+
+<pre><code>{{ partial &quot;MathJax.html&quot; . }}
 </code></pre>
 
-<p>注意:</p>
+<h2 id="notes">Notes:</h2>
 
-<p>TRIGGER是平行運行的, 做多行輸入時,</p>
+<p>要用 <strong>\_</strong> 代替 <strong>_</strong></p>
 
-<p>上面的NEW.priority可能會發生一些奇怪問題。</p>
+<p>要用 <strong>\newline</strong> 不能用 \\</p>
+
+<h2 id="references">References:</h2>
+
+<p><a href="https://divadnojnarg.github.io/blog/mathjax/">https://divadnojnarg.github.io/blog/mathjax/</a></p>
+
+<p><a href="https://www.gohugo.org/doc/tutorials/mathjax/">https://www.gohugo.org/doc/tutorials/mathjax/</a></p>
 
   </div>
   <div class="share-buttons">
