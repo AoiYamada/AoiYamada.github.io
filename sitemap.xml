@@ -3,36 +3,71 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://aoiyamada.github.io/post/appledaily-login-vulnerability/</loc>
-    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <loc>https://aoiyamada.github.io/categories/algorithm/</loc>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://aoiyamada.github.io/categories/</loc>
-    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/post/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/</loc>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://aoiyamada.github.io/post/</loc>
-    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/categories/security/</loc>
-    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://aoiyamada.github.io/tags/</loc>
-    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://aoiyamada.github.io/</loc>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/algorithm/</loc>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/codewars/</loc>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/fsm/</loc>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/regex/</loc>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/post/appledaily-login-vulnerability/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/categories/security/</loc>
     <lastmod>2019-07-13T18:18:26+08:00</lastmod>
     <priority>0</priority>
   </url>

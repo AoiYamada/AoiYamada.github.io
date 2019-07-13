@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>codewars on Wagnaria</title>
+    <link>https://aoiyamada.github.io/tags/codewars/</link>
+    <description>Recent content in codewars on Wagnaria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sat, 13 Jul 2019 18:31:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://aoiyamada.github.io/tags/codewars/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Check if 3 Divides a Binary Number in String Format by Finite State Machine(Using Regex)</title>
+      <link>https://aoiyamada.github.io/post/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/</link>
+      <pubDate>Sat, 13 Jul 2019 18:31:30 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/post/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/</guid>
+      <description>用Regex檢查binary string是否三的倍數 Kata(題目)
+輸入: String format binary number
+輸出: Boolean
+// Examples (Javascript) multipleof3Regex.test(&#39;000&#39;) // should be true multipleof3Regex.test(&#39;001&#39;) // should be false multipleof3Regex.test(&#39;011&#39;) // should be true multipleof3Regex.test(&#39;110&#39;) // should be true multipleof3Regex.test(&#39; abc &#39;) // should be false  建立有限狀態機(FSM) 設s0, s1, s2三個狀態表示mod3 為0, 1, 2
+binary字串中只會有1和／或0
+如果在數值x的binary後面增加一個數位0，等同乘2，變成2x
+如果新增數位1，等同乘2加1，變成2x+1，
+表示從左到右逐個數位看，如果當前&amp;hellip;
+在狀態s0時 看到0，保持狀態s0
+看到1，更新至狀態s1
+在狀態s1時 看到0，更新至狀態s2
+看到1，更新至狀態s0
+在狀態s2時 看到0，更新至狀態s1
+看到1，保持狀態s2
+fsm visualization powered by ivanzuzak.info
+#states s0 s1 s2 #initial s0 #accepting s0 #alphabet 0 1 #transitions s0:0&amp;gt;s0 s0:1&amp;gt;s1 s1:0&amp;gt;s2 s1:1&amp;gt;s0 s2:0&amp;gt;s1 s2:1&amp;gt;s2  起始狀態為s0，如果最終狀態回到s0就是3的倍數</description>
+    </item>
+    
+  </channel>
+</rss>
