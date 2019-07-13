@@ -4,37 +4,125 @@
   
   <url>
     <loc>https://aoiyamada.github.io/categories/</loc>
-    <lastmod>2019-07-12T22:42:16+08:00</lastmod>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/categories/lab/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/post/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/post/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/cudnn/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/cuda/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/docker/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/jupyter/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/linux/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/nvidia/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/nvidia-docker2/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/tensorflow/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/ubuntu/</loc>
+    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/post/partition-and-mount-drive-on-ubuntu/</loc>
+    <lastmod>2019-07-13T12:46:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/gpt/</loc>
+    <lastmod>2019-07-13T12:46:02+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/mount-drive/</loc>
+    <lastmod>2019-07-13T12:46:02+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/parted/</loc>
+    <lastmod>2019-07-13T12:46:02+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/partition/</loc>
+    <lastmod>2019-07-13T12:46:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://aoiyamada.github.io/post/hugo-syntax-highlight/</loc>
     <lastmod>2019-07-12T22:42:16+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/categories/lab/</loc>
-    <lastmod>2019-07-12T22:42:16+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/post/</loc>
-    <lastmod>2019-07-12T22:42:16+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/tags/</loc>
-    <lastmod>2019-07-12T22:42:16+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/</loc>
-    <lastmod>2019-07-12T22:42:16+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -98,12 +186,6 @@
   <url>
     <loc>https://aoiyamada.github.io/tags/trigger/</loc>
     <lastmod>2019-07-10T01:28:36+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/tags/ubuntu/</loc>
-    <lastmod>2019-07-09T22:58:37+08:00</lastmod>
     <priority>0</priority>
   </url>
   

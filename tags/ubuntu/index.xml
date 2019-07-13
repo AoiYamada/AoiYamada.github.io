@@ -6,10 +6,38 @@
     <description>Recent content in ubuntu on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 09 Jul 2019 22:58:37 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 12:53:52 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Setup Tensorflow Gpu Docker With Jupyter on Ubuntu 紀錄</title>
+      <link>https://aoiyamada.github.io/post/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</link>
+      <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/post/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</guid>
+      <description>Nvidia driver upgrade Upgrade nvidia dirver
+sudo add-apt-repository ppa:graphics-drivers/ppa sudo apt update sudo apt upgrade  加了NVIDIA的Repo後就可以在更新Driver那裡更新了
+Install cuDNN 去nvidia官網找個package安裝, 汪意要對應cuda ver, 目前我用cuda 10.2, cudnn 7.6
+Setup nvidia cuda環境 # If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f sudo apt-get purge -y nvidia-docker # Add the package repositories curl -s -L https://nvidia.</description>
+    </item>
+    
+    <item>
+      <title>Partition and Mount Drive on Ubuntu 紀錄</title>
+      <link>https://aoiyamada.github.io/post/partition-and-mount-drive-on-ubuntu/</link>
+      <pubDate>Sat, 13 Jul 2019 12:46:02 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/post/partition-and-mount-drive-on-ubuntu/</guid>
+      <description>前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。 目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark
+ df -Th  看看目標的Drive是哪個, 有沒有掛載, 我是/dev/sdb1
+  sh unmount /dev/sdb1   sudo -i  取得root權限
+  sh parted /dev/sdb   (in parted) print 看看有甚麼Partitions
+ (in parted) rm 所有Partitions
+ (in parted) mkpart data 2048s 100% 我也不太清楚為甚麼從2048開始, gpt的table好像需要一些offset, 資料太多時間太少, 改日研究
+ mkfs.ext4 /dev/sdb1
+ mount /dev/sdb1 /data  別人都mount在/mnt, 我也不太清楚直接mount在/data有甚麼不好, 如果有問題到時改回去/mnt, 然後用ln -s 創建symbolic link</description>
+    </item>
     
     <item>
       <title>安裝Hugo紀錄</title>
