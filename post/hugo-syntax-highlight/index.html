@@ -8,8 +8,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="山田葵" />
   <meta name="description"
-    content="" />
-  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.1eba76c262d43161c6e85fa21e7d2ee5e9b31ac9b61089839d54f1c5a6bbf5a1.css" />
+    content="Hugo Syntax Highlight by Highlight.js 設定紀錄" />
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.39d2c077ef74347fcc784c0fb5c0374b41d90f8e9fef6dbd8f74e0228274832c.css" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512x512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#001020">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#001020">
+  <meta name=”apple-mobile-web-app-capable” content=”yes”>
+<script>
+  
+  if ('serviceWorker' in navigator) {
+    
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+</script>
 
   <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
@@ -45,12 +74,15 @@
     color: #515151;
   }
 </style>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css" rel="stylesheet" />
+  <link rel="prefetch" as="style" onload="this.rel = 'stylesheet'"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css" />
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css">
+</noscript>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
-
 
   
 <script type="application/javascript">
@@ -93,19 +125,19 @@ if (!doNotTrack) {
     </p>
     <div class="app-header-social">
       
-      <a target="_blank" href="https://github.com/AoiYamada"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      <a target="_blank" href="https://github.com/AoiYamada" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
   <title>github</title>
   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
 </svg></a>
       
-      <a target="_blank" href="https://codepen.io/AoiYamada/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      <a target="_blank" href="https://codepen.io/AoiYamada/" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-codepen">
   <title>codepen</title>
   <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line>
 </svg></a>
       
-      <a target="_blank" href="https://www.codewars.com/users/AoiYamada/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      <a target="_blank" href="https://www.codewars.com/users/AoiYamada/" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
   stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-codewars">
   <title>codewars</title>
   <style type="text/css">.st0{stroke-width:1.5;}</style><g><path class="st0" d="M12.44135,22.60998c6.22369,-0.34576 10.94909,-5.87794 10.37282,-11.75586c-0.57627,-5.64742 -5.87794,-9.79655 -11.52536,-9.45079c-5.76268,0.34576 -10.37282,5.30167 -10.14232,11.06435c0.46101,8.98978 9.10503,10.25756 9.56605,10.14232"/><path class="st0" d="M12.0956,11.66089c1.61355,-3.11184 4.7254,-2.42033 6.10844,-0.69153s0.57627,4.95591 -1.03728,5.18641"/><path class="st0" d="M12.0956,11.66089c-1.7288,-2.9966 0.57627,-5.41692 2.76608,-5.64742c2.65083,-0.23051 4.61014,2.18981 4.03387,3.45761"/><path class="st0" d="M12.0956,11.66089c-3.34235,-0.11526 -4.37964,-2.9966 -3.57286,-5.30167c0.92203,-2.42033 4.61014,-2.65083 5.53217,-1.26779"/><path class="st0" d="M12.0956,11.66089c-1.95931,2.88134 -5.41692,2.30507 -6.4542,0.46101s-0.57627,-4.84065 1.61355,-5.07115"/><path class="st0" d="M12.0956,11.66089c1.38304,3.2271 -1.15254,5.76268 -3.2271,5.76268s-4.26438,-1.4983 -3.57286,-3.80337"/><path class="st0" d="M12.0956,11.66089c3.45761,0.46101 4.61014,3.68811 3.45761,5.53217s-4.26438,2.53558 -5.30167,1.15254"/></g>
@@ -113,72 +145,72 @@ if (!doNotTrack) {
       
     </div>
     <div class="codewars-badge">
-        <a target="_blank" href="https://www.codewars.com/users/AoiYamada"><img src="https://www.codewars.com/users/AoiYamada/badges/micro" alt="codewars badge" /></a>
+        <a target="_blank" href="https://www.codewars.com/users/AoiYamada" rel="noreferrer"><img src="https://www.codewars.com/users/AoiYamada/badges/micro" alt="codewars badge" /></a>
     </div>
     <ul class="sidebar-menu">
       
       <li><a href="https://aoiyamada.github.io/">Home</a></li>
       
     </ul>
-    <ul class="tags">
+    <div class="tags">
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/algorithm/">algorithm</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/algorithm/">algorithm</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/appledaily/">appledaily</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/appledaily/">appledaily</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/codewars/">codewars</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/codewars/">codewars</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/cuda/">cuda</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/cuda/">cuda</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/cudnn/">cuDNN</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/cudnn/">cuDNN</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/docker/">docker</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/docker/">docker</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/fsm/">fsm</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/fsm/">fsm</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/gpt/">gpt</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/gpt/">gpt</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/hack/">hack</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/hack/">hack</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/hightlight.js/">hightlight.js</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/hightlight.js/">hightlight.js</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/hugo/">hugo</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/hugo/">hugo</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/jupyter/">jupyter</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/jupyter/">jupyter</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/latex/">latex</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/latex/">latex</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/linux/">linux</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/linux/">linux</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/mount-drive/">mount drive</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/mount-drive/">mount drive</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/mysql/">mysql</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/mysql/">mysql</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/nvidia/">nvidia</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/nvidia/">nvidia</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/nvidia-docker2/">nvidia docker2</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/nvidia-docker2/">nvidia docker2</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/parted/">parted</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/parted/">parted</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/partition/">partition</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/partition/">partition</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/regex/">regex</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/regex/">regex</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/security/">security</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/security/">security</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/syntax-highlight/">syntax highlight</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/syntax-highlight/">syntax highlight</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/tensorflow/">tensorflow</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/tensorflow/">tensorflow</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/trigger/">trigger</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/trigger/">trigger</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/ubuntu/">ubuntu</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/ubuntu/">ubuntu</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/vulnerability/">vulnerability</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/vulnerability/">vulnerability</a>
       
-      <a class="tag" href="https://aoiyamada.github.io/tags/window/">window</a>
+        <a class="tag" href="https://aoiyamada.github.io/tags/window/">window</a>
       
-    </ul>
+    </dig>
   </header>
   <main class="app-container">
     
@@ -208,119 +240,27 @@ if (!doNotTrack) {
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
         <a class="tag" href="https://aoiyamada.github.io/tags/hugo/">hugo</a><a class="tag" href="https://aoiyamada.github.io/tags/hightlight.js/">hightlight.js</a></div></div>
-    <div class="share-buttons">
+    <div class="share-buttons-wrap">
       
 
 
-<style>
-  #share-buttons {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  #share-buttons:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-
-  #share-buttons>div {
-    position: relative;
-    text-align: left;
-    height: 36px;
-    width: 32px;
-    float: left;
-    text-align: center;
-  }
-
-  #share-buttons>div>svg {
-    height: 16px;
-    fill: #d5d5d5;
-    margin-top: 10px;
-  }
-
-  #share-buttons>div:hover {
-    cursor: pointer;
-  }
-
-  #share-buttons>div.facebook:hover>svg {
-    fill: #3b5998;
-  }
-
-  #share-buttons>div.twitter:hover>svg {
-    fill: #55acee;
-  }
-
-  #share-buttons>div.linkedin:hover>svg {
-    fill: #0077b5;
-  }
-
-  #share-buttons>div.pinterest:hover>svg {
-    fill: #cb2027;
-  }
-
-  #share-buttons>div.gplus:hover>svg {
-    fill: #dd4b39;
-  }
-
-  #share-buttons>div.mail:hover>svg {
-    fill: #7d7d7d;
-  }
-
-  #share-buttons>div.instagram:hover>svg {
-    fill: #c73b92;
-  }
-
-  #share-buttons>div.facebook>svg {
-    height: 18px;
-    margin-top: 9px;
-  }
-
-  #share-buttons>div.twitter>svg {
-    height: 20px;
-    margin-top: 8px;
-  }
-
-  #share-buttons>div.linkedin>svg {
-    height: 19px;
-    margin-top: 7px;
-  }
-
-  #share-buttons>div.pinterest>svg {
-    height: 20px;
-    margin-top: 9px;
-  }
-
-  #share-buttons>div.gplus>svg {
-    height: 17px;
-    margin-top: 9px;
-    position: relative;
-    left: 1px;
-  }
-
-  #share-buttons>div.mail>svg {
-    height: 14px;
-    margin-top: 11px;
-  }
-</style>
-
-<div id="share-buttons">
+<div class="share-buttons">
   <div class="facebook" title="Share this on Facebook"
-    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
+    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
     </svg>
   </div>
   <div class="twitter" title="Share this on Twitter"
-    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
+    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
     </svg>
   </div>
   <div class="linkedin" title="Share this on Linkedin"
-    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/&title=&summary=&source=');">
+    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/&title=&summary=&source=');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
@@ -328,7 +268,7 @@ if (!doNotTrack) {
   </div>
   
   <div class="mail" title="Share this through Email"
-    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
+    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z" />
@@ -362,119 +302,27 @@ if (!doNotTrack) {
 <p>其中css的cdn可以換成不同風格的</p>
 
   </div>
-  <div class="share-buttons">
+  <div class="share-buttons-wrap">
     
 
 
-<style>
-  #share-buttons {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  #share-buttons:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-
-  #share-buttons>div {
-    position: relative;
-    text-align: left;
-    height: 36px;
-    width: 32px;
-    float: left;
-    text-align: center;
-  }
-
-  #share-buttons>div>svg {
-    height: 16px;
-    fill: #d5d5d5;
-    margin-top: 10px;
-  }
-
-  #share-buttons>div:hover {
-    cursor: pointer;
-  }
-
-  #share-buttons>div.facebook:hover>svg {
-    fill: #3b5998;
-  }
-
-  #share-buttons>div.twitter:hover>svg {
-    fill: #55acee;
-  }
-
-  #share-buttons>div.linkedin:hover>svg {
-    fill: #0077b5;
-  }
-
-  #share-buttons>div.pinterest:hover>svg {
-    fill: #cb2027;
-  }
-
-  #share-buttons>div.gplus:hover>svg {
-    fill: #dd4b39;
-  }
-
-  #share-buttons>div.mail:hover>svg {
-    fill: #7d7d7d;
-  }
-
-  #share-buttons>div.instagram:hover>svg {
-    fill: #c73b92;
-  }
-
-  #share-buttons>div.facebook>svg {
-    height: 18px;
-    margin-top: 9px;
-  }
-
-  #share-buttons>div.twitter>svg {
-    height: 20px;
-    margin-top: 8px;
-  }
-
-  #share-buttons>div.linkedin>svg {
-    height: 19px;
-    margin-top: 7px;
-  }
-
-  #share-buttons>div.pinterest>svg {
-    height: 20px;
-    margin-top: 9px;
-  }
-
-  #share-buttons>div.gplus>svg {
-    height: 17px;
-    margin-top: 9px;
-    position: relative;
-    left: 1px;
-  }
-
-  #share-buttons>div.mail>svg {
-    height: 14px;
-    margin-top: 11px;
-  }
-</style>
-
-<div id="share-buttons">
+<div class="share-buttons">
   <div class="facebook" title="Share this on Facebook"
-    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
+    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
     </svg>
   </div>
   <div class="twitter" title="Share this on Twitter"
-    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
+    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
     </svg>
   </div>
   <div class="linkedin" title="Share this on Linkedin"
-    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/&title=&summary=&source=');">
+    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/&title=&summary=&source=');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
@@ -482,7 +330,7 @@ if (!doNotTrack) {
   </div>
   
   <div class="mail" title="Share this through Email"
-    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/\/post\/hugo-syntax-highlight\/');">
+    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/');">
     <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z" />
