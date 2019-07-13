@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 13 Jul 2019 12:53:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 18:18:26 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>appledaily</title>
+      <link>https://aoiyamada.github.io/tags/appledaily/</link>
+      <pubDate>Sat, 13 Jul 2019 18:18:26 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/appledaily/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hack</title>
+      <link>https://aoiyamada.github.io/tags/hack/</link>
+      <pubDate>Sat, 13 Jul 2019 18:18:26 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/hack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://aoiyamada.github.io/tags/security/</link>
+      <pubDate>Sat, 13 Jul 2019 18:18:26 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vulnerability</title>
+      <link>https://aoiyamada.github.io/tags/vulnerability/</link>
+      <pubDate>Sat, 13 Jul 2019 18:18:26 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/vulnerability/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cuDNN</title>

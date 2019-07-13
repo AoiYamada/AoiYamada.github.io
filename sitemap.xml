@@ -3,8 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://aoiyamada.github.io/post/appledaily-login-vulnerability/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://aoiyamada.github.io/categories/</loc>
-    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/post/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/categories/security/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/appledaily/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/hack/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/security/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/vulnerability/</loc>
+    <lastmod>2019-07-13T18:18:26+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -15,30 +68,12 @@
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/post/</loc>
-    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://aoiyamada.github.io/post/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</loc>
     <lastmod>2019-07-13T12:53:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/tags/</loc>
-    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://aoiyamada.github.io/categories/tensorflow/</loc>
-    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/</loc>
     <lastmod>2019-07-13T12:53:52+08:00</lastmod>
     <priority>0</priority>
   </url>

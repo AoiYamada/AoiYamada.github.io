@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Wagnaria</title>
+    <link>https://aoiyamada.github.io/categories/security/</link>
+    <description>Recent content in Security on Wagnaria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sat, 13 Jul 2019 18:18:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://aoiyamada.github.io/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Appledaily Login Vulnerability 免費免登入看蘋果新聞</title>
+      <link>https://aoiyamada.github.io/post/appledaily-login-vulnerability/</link>
+      <pubDate>Sat, 13 Jul 2019 18:18:26 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/post/appledaily-login-vulnerability/</guid>
+      <description>蘋果新聞登入漏洞 (不確定甚麼時侯失效)  F12 Ctrl + Shift + P Search Javascript Select Disable Javascript Refresh page 然後就可以不登入不付錢看文章了(X  因為蘋果新文文本直接在HTML中傳送過來, 然後用inline js 在DOM移除文章節點, 而不是經API Auth取得token後再根據token決定是不是傳回全文, 所以當用戶看不到文章的時侯, 已經收到全文, 只要停止inline script運利就可以看到全文。
+或者直接看html source也會看得到。
+壹傳媒作為一家有上億生意的公司, 也太不注重IT技術。</description>
+    </item>
+    
+  </channel>
+</rss>
