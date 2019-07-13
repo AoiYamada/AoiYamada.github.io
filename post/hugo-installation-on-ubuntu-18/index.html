@@ -53,6 +53,17 @@
 
 
   
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-143749175-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="安裝Hugo紀錄"/>
 <meta name="twitter:description" content="Step 1: For window: choco install hugo-extended  For Ubuntu: snap install hugo --channel=extended  用snap是因為目前apt-get的安裝方式，就算apt已是最update，還是只裝得到v0.40，但一些Theme需要新版本的Hugo(v0.55)。這方法安裝的話，hugo指令的讀寫權限會限制在/home/{user}/的目錄下。而Extend是因為Theme要用SCSS。

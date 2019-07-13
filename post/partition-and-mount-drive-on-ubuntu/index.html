@@ -53,9 +53,21 @@
 
 
   
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-143749175-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Partition and Mount Drive on Ubuntu 紀錄"/>
-<meta name="twitter:description" content="前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。 目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark
+<meta name="twitter:description" content="前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。
+目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark
  df -Th  看看目標的Drive是哪個, 有沒有掛載, 我是/dev/sdb1
   sh unmount /dev/sdb1   sudo -i  取得root權限
   sh parted /dev/sdb   (in parted) print 看看有甚麼Partitions
@@ -65,7 +77,8 @@
  mount /dev/sdb1 /data  別人都mount在/mnt, 我也不太清楚直接mount在/data有甚麼不好, 如果有問題到時改回去/mnt, 然後用ln -s 創建symbolic link"/>
 
   <meta property="og:title" content="Partition and Mount Drive on Ubuntu 紀錄" />
-<meta property="og:description" content="前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。 目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark
+<meta property="og:description" content="前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。
+目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark
  df -Th  看看目標的Drive是哪個, 有沒有掛載, 我是/dev/sdb1
   sh unmount /dev/sdb1   sudo -i  取得root權限
   sh parted /dev/sdb   (in parted) print 看看有甚麼Partitions
@@ -321,8 +334,9 @@
     </div>
   </header>
   <div class="post-content">
-    <p>前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。
-目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark</p>
+    <p>前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。</p>
+
+<p>目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark</p>
 
 <ol>
 <li><pre><code class="language-sh">df -Th

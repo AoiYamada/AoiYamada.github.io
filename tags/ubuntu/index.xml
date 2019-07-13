@@ -29,7 +29,8 @@ Setup nvidia cuda環境 # If you have nvidia-docker 1.0 installed: we need to re
       <pubDate>Sat, 13 Jul 2019 12:46:02 +0800</pubDate>
       
       <guid>https://aoiyamada.github.io/post/partition-and-mount-drive-on-ubuntu/</guid>
-      <description>前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。 目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark
+      <description>前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。
+目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark
  df -Th  看看目標的Drive是哪個, 有沒有掛載, 我是/dev/sdb1
   sh unmount /dev/sdb1   sudo -i  取得root權限
   sh parted /dev/sdb   (in parted) print 看看有甚麼Partitions
