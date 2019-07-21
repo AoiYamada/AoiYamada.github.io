@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Wagnaria</title>
+    <link>https://aoiyamada.github.io/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on Wagnaria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sat, 13 Jul 2019 12:53:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://aoiyamada.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup Tensorflow Gpu Docker With Jupyter on Ubuntu 紀錄</title>
+      <link>https://aoiyamada.github.io/posts/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</link>
+      <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

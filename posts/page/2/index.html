@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  <title>Posts | Wagnaria</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="山田葵" />
+  <meta name="description"
+    content="Posts" />
+
+  
+  <meta name="title" content="Posts">
+  <meta name="keywords" content="algorithm,appledaily,codewars,cuda,cuDNN,docker,fsm,gpt,hack,hightlight.js,hugo,jupyter,latex,linux,mount drive,mysql,nvidia,nvidia docker2,parted,partition,pwa,regex,security,syntax highlight,tensorflow,trigger,ubuntu,vulnerability,window,Wagnaria">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="Chinese">
+  <meta name="author" content="山田葵">
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aoiyamada.github.io/posts/">
+  <meta property="og:title" content="Posts">
+  <meta property="og:description"
+    content="Posts">
+  <meta property="og:image" content="/images/avatar.jpg">
+
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aoiyamada.github.io/posts/">
+  <meta property="twitter:title" content="Posts">
+  <meta property="twitter:description"
+    content="Posts">
+  <meta property="twitter:image" content="/images/avatar.jpg">
+
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.8abfd58f595158c1bd25d553571d030c7d18f19a00ac391d944c9ebd76d8366e.css" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512x512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#001020">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#001020">
+  <meta name=”apple-mobile-web-app-capable” content=”yes”>
+<script>
+  
+  if ('serviceWorker' in navigator) {
+    
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+</script>
+
+  <script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\[', '\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: {
+          equationNumbers: { autoNumber: "AMS" },
+          extensions: ["AMSmath.js", "AMSsymbols.js"]
+        }
+      }
+    });
+    MathJax.Hub.Queue(function () {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+<style>
+  code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+  }
+</style>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-143749175-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="我是誰？在哪裡？幹甚麼？"/>
+
+  <meta property="og:title" content="Posts" />
+<meta property="og:description" content="我是誰？在哪裡？幹甚麼？" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aoiyamada.github.io/posts/" />
+
+<meta property="og:updated_time" content="2019-07-21T04:38:05&#43;08:00"/>
+
+
+</head>
+
+<body>
+  <header class="app-header">
+    <a href="https://aoiyamada.github.io/"><img class="app-header-avatar"
+        src="/images/avatar.jpg"
+        alt="山田葵" /></a>
+    <h1>Wagnaria</h1>
+    <p>
+      我是誰？在哪裡？幹甚麼？
+    </p>
+    <div class="app-header-social">
+      
+      <a target="_blank" href="https://github.com/AoiYamada" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+      
+      <a target="_blank" href="https://codepen.io/AoiYamada/" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-codepen">
+  <title>codepen</title>
+  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line>
+</svg></a>
+      
+      <a target="_blank" href="https://www.codewars.com/users/AoiYamada/" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-codewars">
+  <title>codewars</title>
+  <style type="text/css">.st0{stroke-width:1.5;}</style><g><path class="st0" d="M12.44135,22.60998c6.22369,-0.34576 10.94909,-5.87794 10.37282,-11.75586c-0.57627,-5.64742 -5.87794,-9.79655 -11.52536,-9.45079c-5.76268,0.34576 -10.37282,5.30167 -10.14232,11.06435c0.46101,8.98978 9.10503,10.25756 9.56605,10.14232"/><path class="st0" d="M12.0956,11.66089c1.61355,-3.11184 4.7254,-2.42033 6.10844,-0.69153s0.57627,4.95591 -1.03728,5.18641"/><path class="st0" d="M12.0956,11.66089c-1.7288,-2.9966 0.57627,-5.41692 2.76608,-5.64742c2.65083,-0.23051 4.61014,2.18981 4.03387,3.45761"/><path class="st0" d="M12.0956,11.66089c-3.34235,-0.11526 -4.37964,-2.9966 -3.57286,-5.30167c0.92203,-2.42033 4.61014,-2.65083 5.53217,-1.26779"/><path class="st0" d="M12.0956,11.66089c-1.95931,2.88134 -5.41692,2.30507 -6.4542,0.46101s-0.57627,-4.84065 1.61355,-5.07115"/><path class="st0" d="M12.0956,11.66089c1.38304,3.2271 -1.15254,5.76268 -3.2271,5.76268s-4.26438,-1.4983 -3.57286,-3.80337"/><path class="st0" d="M12.0956,11.66089c3.45761,0.46101 4.61014,3.68811 3.45761,5.53217s-4.26438,2.53558 -5.30167,1.15254"/></g>
+</svg></a>
+      
+    </div>
+    <div class="codewars-badge">
+      <a target="_blank" href="https://www.codewars.com/users/AoiYamada" rel="noreferrer"><img src="https://www.codewars.com/users/AoiYamada/badges/micro" alt="codewars badge" /></a>
+    </div>
+    <ul class="sidebar-menu">
+      
+      <li><a href="https://aoiyamada.github.io/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-home">
+  <title>home</title>
+  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg> Home</a></li>
+      
+      <li><a href="https://aoiyamada.github.io/categories"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-folder">
+  <title>folder</title>
+  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+</svg> Category</a></li>
+      
+      <li><a href="https://aoiyamada.github.io/tags"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg> Tag</a></li>
+      
+    </ul>
+  </header>
+  <main class="app-container">
+    
+<article>
+  <h1>Posts</h1>
+  <ul class="posts-list">
+    
+    <li class="posts-list-item">
+      <a class="posts-list-item-link" href="https://aoiyamada.github.io/posts/hugo-syntax-highlight/">
+        <div class="posts-list-item-image-wrapper">
+          
+          
+            
+            
+            
+            <img class="posts-list-item-image"
+              src="/posts/hugo-syntax-highlight/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_180x120_resize_box_2.png"
+              srcset="/posts/hugo-syntax-highlight/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_180x120_resize_box_2.png 1x, /posts/hugo-syntax-highlight/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_360x240_resize_box_2.png 2x, /posts/hugo-syntax-highlight/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_520x360_resize_box_2.png 3x"
+              alt="images/cover.png"
+            />
+          
+        </div>
+        <div class="posts-list-item-text">
+          <div class="posts-list-item-title">Hugo Syntax Highlight by Highlight.js 設定紀錄</div>
+          <div class="posts-list-item-description-wrapper">
+            <span class="posts-list-item-description">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg> 1 min read -
+              Jul 12, 2019
+            </span>
+            <div class="posts-list-item-summary"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="posts-list-item">
+      <a class="posts-list-item-link" href="https://aoiyamada.github.io/posts/set-latex-on-hugo/">
+        <div class="posts-list-item-image-wrapper">
+          
+          
+            
+            
+            
+            <img class="posts-list-item-image"
+              src="/posts/set-latex-on-hugo/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_180x120_resize_box_2.png"
+              srcset="/posts/set-latex-on-hugo/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_180x120_resize_box_2.png 1x, /posts/set-latex-on-hugo/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_360x240_resize_box_2.png 2x, /posts/set-latex-on-hugo/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_520x360_resize_box_2.png 3x"
+              alt="images/cover.png"
+            />
+          
+        </div>
+        <div class="posts-list-item-text">
+          <div class="posts-list-item-title">Set Latex on Hugo 紀錄</div>
+          <div class="posts-list-item-description-wrapper">
+            <span class="posts-list-item-description">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg> 1 min read -
+              Jul 12, 2019
+            </span>
+            <div class="posts-list-item-summary"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="posts-list-item">
+      <a class="posts-list-item-link" href="https://aoiyamada.github.io/posts/mysql-insert-trigger-notes/">
+        <div class="posts-list-item-image-wrapper">
+          
+          
+            
+            
+            
+            <img class="posts-list-item-image"
+              src="/posts/mysql-insert-trigger-notes/images/cover_hu41cdb993d96c33ec2c9237b2fdb59d66_41578_180x120_resize_box_2.png"
+              srcset="/posts/mysql-insert-trigger-notes/images/cover_hu41cdb993d96c33ec2c9237b2fdb59d66_41578_180x120_resize_box_2.png 1x, /posts/mysql-insert-trigger-notes/images/cover_hu41cdb993d96c33ec2c9237b2fdb59d66_41578_360x240_resize_box_2.png 2x, /posts/mysql-insert-trigger-notes/images/cover_hu41cdb993d96c33ec2c9237b2fdb59d66_41578_520x360_resize_box_2.png 3x"
+              alt="images/cover.png"
+            />
+          
+        </div>
+        <div class="posts-list-item-text">
+          <div class="posts-list-item-title">Mysql Insert Trigger Notes</div>
+          <div class="posts-list-item-description-wrapper">
+            <span class="posts-list-item-description">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg> 1 min read -
+              Jul 10, 2019
+            </span>
+            <div class="posts-list-item-summary"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="posts-list-item">
+      <a class="posts-list-item-link" href="https://aoiyamada.github.io/posts/hugo-installation-on-ubuntu-18/">
+        <div class="posts-list-item-image-wrapper">
+          
+          
+            
+            
+            
+            <img class="posts-list-item-image"
+              src="/posts/hugo-installation-on-ubuntu-18/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_180x120_resize_box_2.png"
+              srcset="/posts/hugo-installation-on-ubuntu-18/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_180x120_resize_box_2.png 1x, /posts/hugo-installation-on-ubuntu-18/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_360x240_resize_box_2.png 2x, /posts/hugo-installation-on-ubuntu-18/images/cover_hu5ff7678116e37e4148cba01ab439f068_13782_520x360_resize_box_2.png 3x"
+              alt="images/cover.png"
+            />
+          
+        </div>
+        <div class="posts-list-item-text">
+          <div class="posts-list-item-title">安裝Hugo紀錄</div>
+          <div class="posts-list-item-description-wrapper">
+            <span class="posts-list-item-description">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg> 1 min read -
+              Jul 9, 2019
+            </span>
+            <div class="posts-list-item-summary"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+    
+  </ul>
+  
+
+<ul class="pagination">
+  
+  <li class="page-item">
+    <a class="page-link" href="/posts/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-arrow-left">
+  <title>arrow-left</title>
+  <line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline>
+</svg>
+    </a>
+  </li>
+  
+  
+  <li class="page-item">
+    <a class="page-link" href="/posts/">
+      1
+    </a>
+  </li>
+  
+  <li class="page-item active">
+    <a class="page-link" href="/posts/page/2/">
+      2
+    </a>
+  </li>
+  
+  
+</ul>
+
+
+
+</article>
+
+  </main>
+  <footer>
+    <link rel="prefetch" as="style" onload="this.rel = 'stylesheet'"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css" />
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css">
+</noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+  </footer>
+</body>
+
+</html>

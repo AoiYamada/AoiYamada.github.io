@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pwa on Wagnaria</title>
+    <link>https://aoiyamada.github.io/tags/pwa/</link>
+    <description>Recent content in pwa on Wagnaria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 21 Jul 2019 04:38:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://aoiyamada.github.io/tags/pwa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo PWA Setup</title>
+      <link>https://aoiyamada.github.io/posts/hugo-pwa-setup/</link>
+      <pubDate>Sun, 21 Jul 2019 04:38:05 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/hugo-pwa-setup/</guid>
+      <description>&lt;p&gt;有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
+這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
+然後騙客戶把APP做出來了(X&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

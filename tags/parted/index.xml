@@ -13,19 +13,11 @@
     
     <item>
       <title>Partition and Mount Drive on Ubuntu 紀錄</title>
-      <link>https://aoiyamada.github.io/post/partition-and-mount-drive-on-ubuntu/</link>
+      <link>https://aoiyamada.github.io/posts/partition-and-mount-drive-on-ubuntu/</link>
       <pubDate>Sat, 13 Jul 2019 12:46:02 +0800</pubDate>
       
-      <guid>https://aoiyamada.github.io/post/partition-and-mount-drive-on-ubuntu/</guid>
-      <description>前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。
-目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark
- df -Th  看看目標的Drive是哪個, 有沒有掛載, 我是/dev/sdb1
-  sh unmount /dev/sdb1   sudo -i  取得root權限
-  sh parted /dev/sdb   (in parted) print 看看有甚麼Partitions
- (in parted) rm 所有Partitions
- (in parted) mkpart data 2048s 100% 我也不太清楚為甚麼從2048開始, gpt的table好像需要一些offset, 資料太多時間太少, 改日研究
- mkfs.ext4 /dev/sdb1
- mount /dev/sdb1 /data  別人都mount在/mnt, 我也不太清楚直接mount在/data有甚麼不好, 如果有問題到時改回去/mnt, 然後用ln -s 創建symbolic link</description>
+      <guid>https://aoiyamada.github.io/posts/partition-and-mount-drive-on-ubuntu/</guid>
+      <description></description>
     </item>
     
   </channel>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Wagnaria</title>
+    <link>https://aoiyamada.github.io/posts/</link>
+    <description>Recent content in Posts on Wagnaria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 21 Jul 2019 04:38:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://aoiyamada.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo PWA Setup</title>
+      <link>https://aoiyamada.github.io/posts/hugo-pwa-setup/</link>
+      <pubDate>Sun, 21 Jul 2019 04:38:05 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/hugo-pwa-setup/</guid>
+      <description>&lt;p&gt;有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
+這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
+然後騙客戶把APP做出來了(X&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用Regex檢查binary string是否三的倍數</title>
+      <link>https://aoiyamada.github.io/posts/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/</link>
+      <pubDate>Sat, 13 Jul 2019 18:31:30 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Appledaily Login Vulnerability 免費免登入看蘋果新聞</title>
+      <link>https://aoiyamada.github.io/posts/appledaily-login-vulnerability/</link>
+      <pubDate>Sat, 13 Jul 2019 18:18:26 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/appledaily-login-vulnerability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Setup Tensorflow Gpu Docker With Jupyter on Ubuntu 紀錄</title>
+      <link>https://aoiyamada.github.io/posts/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</link>
+      <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Partition and Mount Drive on Ubuntu 紀錄</title>
+      <link>https://aoiyamada.github.io/posts/partition-and-mount-drive-on-ubuntu/</link>
+      <pubDate>Sat, 13 Jul 2019 12:46:02 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/partition-and-mount-drive-on-ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo Syntax Highlight by Highlight.js 設定紀錄</title>
+      <link>https://aoiyamada.github.io/posts/hugo-syntax-highlight/</link>
+      <pubDate>Fri, 12 Jul 2019 22:42:16 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/hugo-syntax-highlight/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Set Latex on Hugo 紀錄</title>
+      <link>https://aoiyamada.github.io/posts/set-latex-on-hugo/</link>
+      <pubDate>Fri, 12 Jul 2019 01:36:18 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/set-latex-on-hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql Insert Trigger Notes</title>
+      <link>https://aoiyamada.github.io/posts/mysql-insert-trigger-notes/</link>
+      <pubDate>Wed, 10 Jul 2019 01:28:36 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/mysql-insert-trigger-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>安裝Hugo紀錄</title>
+      <link>https://aoiyamada.github.io/posts/hugo-installation-on-ubuntu-18/</link>
+      <pubDate>Tue, 09 Jul 2019 22:58:37 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/hugo-installation-on-ubuntu-18/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

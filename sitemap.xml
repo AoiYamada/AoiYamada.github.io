@@ -3,36 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://aoiyamada.github.io/categories/algorithm/</loc>
-    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://aoiyamada.github.io/categories/</loc>
-    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <lastmod>2019-07-21T04:38:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/post/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/</loc>
-    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <loc>https://aoiyamada.github.io/posts/hugo-pwa-setup/</loc>
+    <lastmod>2019-07-21T04:38:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/post/</loc>
-    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <loc>https://aoiyamada.github.io/categories/lab/</loc>
+    <lastmod>2019-07-21T04:38:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/posts/</loc>
+    <lastmod>2019-07-21T04:38:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://aoiyamada.github.io/tags/</loc>
-    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+    <lastmod>2019-07-21T04:38:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://aoiyamada.github.io/</loc>
+    <lastmod>2019-07-21T04:38:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/hugo/</loc>
+    <lastmod>2019-07-21T04:38:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/tags/pwa/</loc>
+    <lastmod>2019-07-21T04:38:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/categories/algorithm/</loc>
     <lastmod>2019-07-13T18:31:30+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -62,7 +80,12 @@
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/post/appledaily-login-vulnerability/</loc>
+    <loc>https://aoiyamada.github.io/posts/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/</loc>
+    <lastmod>2019-07-13T18:31:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://aoiyamada.github.io/posts/appledaily-login-vulnerability/</loc>
     <lastmod>2019-07-13T18:18:26+08:00</lastmod>
   </url>
   
@@ -97,20 +120,14 @@
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/categories/lab/</loc>
+    <loc>https://aoiyamada.github.io/categories/machine-learning/</loc>
     <lastmod>2019-07-13T12:53:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/post/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</loc>
+    <loc>https://aoiyamada.github.io/posts/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/</loc>
     <lastmod>2019-07-13T12:53:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/categories/tensorflow/</loc>
-    <lastmod>2019-07-13T12:53:52+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -168,7 +185,7 @@
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/post/partition-and-mount-drive-on-ubuntu/</loc>
+    <loc>https://aoiyamada.github.io/posts/partition-and-mount-drive-on-ubuntu/</loc>
     <lastmod>2019-07-13T12:46:02+08:00</lastmod>
   </url>
   
@@ -197,18 +214,12 @@
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/post/hugo-syntax-highlight/</loc>
+    <loc>https://aoiyamada.github.io/posts/hugo-syntax-highlight/</loc>
     <lastmod>2019-07-12T22:42:16+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://aoiyamada.github.io/tags/hightlight.js/</loc>
-    <lastmod>2019-07-12T22:42:16+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/tags/hugo/</loc>
     <lastmod>2019-07-12T22:42:16+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -220,13 +231,7 @@
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/categories/latex/</loc>
-    <lastmod>2019-07-12T01:36:18+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/post/set-latex-on-hugo/</loc>
+    <loc>https://aoiyamada.github.io/posts/set-latex-on-hugo/</loc>
     <lastmod>2019-07-12T01:36:18+08:00</lastmod>
   </url>
   
@@ -237,13 +242,7 @@
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/categories/mysql/</loc>
-    <lastmod>2019-07-10T01:28:36+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://aoiyamada.github.io/post/mysql-insert-trigger-notes/</loc>
+    <loc>https://aoiyamada.github.io/posts/mysql-insert-trigger-notes/</loc>
     <lastmod>2019-07-10T01:28:36+08:00</lastmod>
   </url>
   
@@ -272,7 +271,7 @@
   </url>
   
   <url>
-    <loc>https://aoiyamada.github.io/post/hugo-installation-on-ubuntu-18/</loc>
+    <loc>https://aoiyamada.github.io/posts/hugo-installation-on-ubuntu-18/</loc>
     <lastmod>2019-07-09T22:58:37+08:00</lastmod>
   </url>
   

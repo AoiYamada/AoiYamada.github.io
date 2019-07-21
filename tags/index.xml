@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 13 Jul 2019 18:31:30 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jul 2019 04:38:05 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo</title>
+      <link>https://aoiyamada.github.io/tags/hugo/</link>
+      <pubDate>Sun, 21 Jul 2019 04:38:05 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pwa</title>
+      <link>https://aoiyamada.github.io/tags/pwa/</link>
+      <pubDate>Sun, 21 Jul 2019 04:38:05 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/pwa/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>algorithm</title>
@@ -206,15 +224,6 @@
       <pubDate>Fri, 12 Jul 2019 22:42:16 +0800</pubDate>
       
       <guid>https://aoiyamada.github.io/tags/hightlight.js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://aoiyamada.github.io/tags/hugo/</link>
-      <pubDate>Fri, 12 Jul 2019 22:42:16 +0800</pubDate>
-      
-      <guid>https://aoiyamada.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

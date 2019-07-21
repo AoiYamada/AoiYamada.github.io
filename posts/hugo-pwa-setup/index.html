@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+  <title>Hugo PWA Setup | Wagnaria</title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="山田葵" />
+  <meta name="description"
+    content="有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
+這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
+然後騙客戶把APP做出來了(X" />
+
+  
+  <meta name="title" content="Hugo PWA Setup">
+  <meta name="keywords" content="algorithm,appledaily,codewars,cuda,cuDNN,docker,fsm,gpt,hack,hightlight.js,hugo,jupyter,latex,linux,mount drive,mysql,nvidia,nvidia docker2,parted,partition,pwa,regex,security,syntax highlight,tensorflow,trigger,ubuntu,vulnerability,window,Wagnaria">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="Chinese">
+  <meta name="author" content="山田葵">
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aoiyamada.github.io/posts/hugo-pwa-setup/">
+  <meta property="og:title" content="Hugo PWA Setup">
+  <meta property="og:description"
+    content="有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
+這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
+然後騙客戶把APP做出來了(X">
+  <meta property="og:image" content="/posts/hugo-pwa-setup/images/cover.png">
+
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aoiyamada.github.io/posts/hugo-pwa-setup/">
+  <meta property="twitter:title" content="Hugo PWA Setup">
+  <meta property="twitter:description"
+    content="有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
+這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
+然後騙客戶把APP做出來了(X">
+  <meta property="twitter:image" content="/posts/hugo-pwa-setup/images/cover.png">
+
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.8abfd58f595158c1bd25d553571d030c7d18f19a00ac391d944c9ebd76d8366e.css" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon/favicon-512x512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#001020">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#001020">
+  <meta name=”apple-mobile-web-app-capable” content=”yes”>
+<script>
+  
+  if ('serviceWorker' in navigator) {
+    
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+</script>
+
+  <script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\[', '\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: {
+          equationNumbers: { autoNumber: "AMS" },
+          extensions: ["AMSmath.js", "AMSsymbols.js"]
+        }
+      }
+    });
+    MathJax.Hub.Queue(function () {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+<style>
+  code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+  }
+</style>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-143749175-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://aoiyamada.github.io/posts/hugo-pwa-setup/images/cover.png"/>
+<meta name="twitter:title" content="Hugo PWA Setup"/>
+<meta name="twitter:description" content="有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
+這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
+然後騙客戶把APP做出來了(X"/>
+
+  <meta property="og:title" content="Hugo PWA Setup" />
+<meta property="og:description" content="有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
+這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
+然後騙客戶把APP做出來了(X" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aoiyamada.github.io/posts/hugo-pwa-setup/" />
+<meta property="article:published_time" content="2019-07-21T04:38:05&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-21T04:38:05&#43;08:00"/>
+
+
+</head>
+
+<body>
+  <header class="app-header">
+    <a href="https://aoiyamada.github.io/"><img class="app-header-avatar"
+        src="/images/avatar.jpg"
+        alt="山田葵" /></a>
+    <h1>Wagnaria</h1>
+    <p>
+      我是誰？在哪裡？幹甚麼？
+    </p>
+    <div class="app-header-social">
+      
+      <a target="_blank" href="https://github.com/AoiYamada" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+      
+      <a target="_blank" href="https://codepen.io/AoiYamada/" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-codepen">
+  <title>codepen</title>
+  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line>
+</svg></a>
+      
+      <a target="_blank" href="https://www.codewars.com/users/AoiYamada/" rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-codewars">
+  <title>codewars</title>
+  <style type="text/css">.st0{stroke-width:1.5;}</style><g><path class="st0" d="M12.44135,22.60998c6.22369,-0.34576 10.94909,-5.87794 10.37282,-11.75586c-0.57627,-5.64742 -5.87794,-9.79655 -11.52536,-9.45079c-5.76268,0.34576 -10.37282,5.30167 -10.14232,11.06435c0.46101,8.98978 9.10503,10.25756 9.56605,10.14232"/><path class="st0" d="M12.0956,11.66089c1.61355,-3.11184 4.7254,-2.42033 6.10844,-0.69153s0.57627,4.95591 -1.03728,5.18641"/><path class="st0" d="M12.0956,11.66089c-1.7288,-2.9966 0.57627,-5.41692 2.76608,-5.64742c2.65083,-0.23051 4.61014,2.18981 4.03387,3.45761"/><path class="st0" d="M12.0956,11.66089c-3.34235,-0.11526 -4.37964,-2.9966 -3.57286,-5.30167c0.92203,-2.42033 4.61014,-2.65083 5.53217,-1.26779"/><path class="st0" d="M12.0956,11.66089c-1.95931,2.88134 -5.41692,2.30507 -6.4542,0.46101s-0.57627,-4.84065 1.61355,-5.07115"/><path class="st0" d="M12.0956,11.66089c1.38304,3.2271 -1.15254,5.76268 -3.2271,5.76268s-4.26438,-1.4983 -3.57286,-3.80337"/><path class="st0" d="M12.0956,11.66089c3.45761,0.46101 4.61014,3.68811 3.45761,5.53217s-4.26438,2.53558 -5.30167,1.15254"/></g>
+</svg></a>
+      
+    </div>
+    <div class="codewars-badge">
+      <a target="_blank" href="https://www.codewars.com/users/AoiYamada" rel="noreferrer"><img src="https://www.codewars.com/users/AoiYamada/badges/micro" alt="codewars badge" /></a>
+    </div>
+    <ul class="sidebar-menu">
+      
+      <li><a href="https://aoiyamada.github.io/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-home">
+  <title>home</title>
+  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg> Home</a></li>
+      
+      <li><a href="https://aoiyamada.github.io/categories"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-folder">
+  <title>folder</title>
+  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+</svg> Category</a></li>
+      
+      <li><a href="https://aoiyamada.github.io/tags"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg> Tag</a></li>
+      
+    </ul>
+  </header>
+  <main class="app-container">
+    
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Hugo PWA Setup</h1>
+    <div class="post-meta">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+        Jul 21, 2019
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+        2 min read
+      </div><div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+        <a class="tag" href="https://aoiyamada.github.io/tags/hugo/">hugo</a><a class="tag" href="https://aoiyamada.github.io/tags/pwa/">pwa</a></div></div>
+    <div class="share-buttons-wrap">
+      
+
+<div class="share-buttons">
+  <div class="facebook" title="Share this on Facebook"
+    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/posts\/hugo-pwa-setup\/');">
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
+    </svg>
+  </div>
+  <div class="twitter" title="Share this on Twitter"
+    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/posts\/hugo-pwa-setup\/');">
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
+    </svg>
+  </div>
+  <div class="linkedin" title="Share this on Linkedin"
+    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/posts\/hugo-pwa-setup\/&title=&summary=&source=');">
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
+    </svg>
+  </div>
+  
+  <div class="mail" title="Share this through Email"
+    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/posts\/hugo-pwa-setup\/');">
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z" />
+    </svg>
+  </div>
+</div>
+    </div>
+  </header>
+  <div class="post-content">
+    <p>有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
+這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
+然後騙客戶把APP做出來了(X</p>
+
+<h2 id="step-1-新增導入-pwa-的script">Step 1: 新增導入 PWA 的Script</h2>
+
+<p><strong>layouts/partials/pwa.html</strong></p>
+
+<pre><code class="language-html">&lt;meta name=”apple-mobile-web-app-capable” content=”yes”&gt;
+&lt;script&gt;
+  // Check that service workers are registered
+  if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () =&gt; {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+&lt;/script&gt;
+</code></pre>
+
+<p>然後在 <strong>layouts/_default/baseof.html</strong> 的header加入</p>
+
+<pre><code class="language-html">{{ partial &quot;pwa.html&quot; }}
+</code></pre>
+
+<h2 id="step-2-新增-manifest">Step 2: 新增 Manifest</h2>
+
+<p>用線上 favicon generator基本會自動生成出來</p>
+
+<p><strong>static/manifest.json</strong></p>
+
+<pre><code class="language-json">{
+  &quot;short_name&quot;: &quot;Wagnaria&quot;,
+  &quot;name&quot;: &quot;Wagnaria&quot;,
+  &quot;icons&quot;: [
+    {
+      &quot;src&quot;: &quot;\/favicon\/android-icon-36x36.png&quot;,
+      &quot;sizes&quot;: &quot;36x36&quot;,
+      &quot;type&quot;: &quot;image\/png&quot;,
+      &quot;density&quot;: &quot;0.75&quot;
+    },
+    {
+      &quot;src&quot;: &quot;\/favicon\/android-icon-48x48.png&quot;,
+      &quot;sizes&quot;: &quot;48x48&quot;,
+      &quot;type&quot;: &quot;image\/png&quot;,
+      &quot;density&quot;: &quot;1.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;\/favicon\/android-icon-72x72.png&quot;,
+      &quot;sizes&quot;: &quot;72x72&quot;,
+      &quot;type&quot;: &quot;image\/png&quot;,
+      &quot;density&quot;: &quot;1.5&quot;
+    },
+    {
+      &quot;src&quot;: &quot;\/favicon\/android-icon-96x96.png&quot;,
+      &quot;sizes&quot;: &quot;96x96&quot;,
+      &quot;type&quot;: &quot;image\/png&quot;,
+      &quot;density&quot;: &quot;2.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;\/favicon\/android-icon-144x144.png&quot;,
+      &quot;sizes&quot;: &quot;144x144&quot;,
+      &quot;type&quot;: &quot;image\/png&quot;,
+      &quot;density&quot;: &quot;3.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;\/favicon\/android-icon-192x192.png&quot;,
+      &quot;sizes&quot;: &quot;192x192&quot;,
+      &quot;type&quot;: &quot;image\/png&quot;,
+      &quot;density&quot;: &quot;4.0&quot;
+    },
+    {
+      &quot;src&quot;: &quot;\/favicon\/favicon-512x512.png&quot;,
+      &quot;sizes&quot;: &quot;512x512&quot;,
+      &quot;type&quot;: &quot;image\/png&quot;,
+      &quot;density&quot;: &quot;5.0&quot;
+    }
+  ],
+  &quot;start_url&quot;: &quot;/?source=pwa&quot;,
+  &quot;background_color&quot;: &quot;#001020&quot;,
+  &quot;display&quot;: &quot;standalone&quot;,
+  &quot;theme_color&quot;: &quot;#001020&quot;
+}
+</code></pre>
+
+<h2 id="step-3-新增-service-worker">Step 3: 新增 Service Worker</h2>
+
+<p><strong>static/service-worker.js</strong></p>
+
+<pre><code class="language-js">// https://developers.google.com/web/tools/workbox/guides/get-started
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
+  workbox.routing.registerRoute(
+    new RegExp(/\/.*/),
+    workbox.strategies.networkFirst()
+  );
+
+  workbox.routing.registerRoute(
+    // Cache CSS files
+    /.*\.css/,
+    // Use cache but update in the background ASAP
+    workbox.strategies.staleWhileRevalidate({
+      // Use a custom cache name
+      cacheName: 'css-cache',
+    })
+  );
+
+  workbox.routing.registerRoute(
+    // Cache image files
+    /.*\.(?:png|jpg|jpeg|svg|gif)|https:\/\/www\.codewars\.com\/users\/AoiYamada\/badges\/micro/,
+    // Use the cache if it's available
+    workbox.strategies.cacheFirst({
+      // Use a custom cache name
+      cacheName: 'image-cache',
+      plugins: [
+        new workbox.expiration.Plugin({
+          // Cache only 20 images
+          maxEntries: 20,
+          // Cache for a maximum of a week
+          maxAgeSeconds: 7 * 24 * 60 * 60,
+        })
+      ],
+    })
+  );
+} else {
+  console.log(`Boo! Workbox didn't load 😬`);
+}
+</code></pre>
+
+<h2 id="完成">完成</h2>
+
+<p>接下來用移動設備打開網站時,
+Android會詢問是否安裝到桌面,
+IOS需要手動在Safari按新增到桌面</p>
+
+<p>上架支援方面目前還不是很完善, 粗略看了一下,
+Play Store上架需要外包一層JAVA APP,
+App Store暫時不支援</p>
+
+<p>不過製作 PWA 形式的APP是網站開發的趨勢,
+相信 PWA 很快就能在所有平台無痛上架</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+<li><a href="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=zh-tw">你的首個 Progressive Web App | Web Fundamentals | Google Developers</a></li>
+<li><a href="https://developers.google.com/web/tools/workbox/guides/get-started?hl=zh-tw"> Workbox 使用入門 |  Google Developers</a></li>
+</ol>
+  </div>
+  <div class="share-buttons-wrap">
+    
+
+<div class="share-buttons">
+  <div class="facebook" title="Share this on Facebook"
+    onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/aoiyamada.github.io\/posts\/hugo-pwa-setup\/');">
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" />
+    </svg>
+  </div>
+  <div class="twitter" title="Share this on Twitter"
+    onclick="window.open('http://twitter.com/home?status=https:\/\/aoiyamada.github.io\/posts\/hugo-pwa-setup\/');">
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" />
+    </svg>
+  </div>
+  <div class="linkedin" title="Share this on Linkedin"
+    onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/aoiyamada.github.io\/posts\/hugo-pwa-setup\/&title=&summary=&source=');">
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" />
+    </svg>
+  </div>
+  
+  <div class="mail" title="Share this through Email"
+    onclick="window.open('mailto:?&body=https:\/\/aoiyamada.github.io\/posts\/hugo-pwa-setup\/');">
+    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z" />
+    </svg>
+  </div>
+</div>
+  </div>
+  <div class="post-footer">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wagnaria" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</article>
+
+  </main>
+  <footer>
+    <link rel="prefetch" as="style" onload="this.rel = 'stylesheet'"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css" />
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css">
+</noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+  </footer>
+</body>
+
+</html>
