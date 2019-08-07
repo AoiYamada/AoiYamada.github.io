@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 21 Jul 2019 04:38:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 13:51:40 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Lab</title>
       <link>https://aoiyamada.github.io/categories/lab/</link>
-      <pubDate>Sun, 21 Jul 2019 04:38:05 +0800</pubDate>
+      <pubDate>Sat, 03 Aug 2019 13:51:40 +0800</pubDate>
       
       <guid>https://aoiyamada.github.io/categories/lab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://aoiyamada.github.io/categories/machine-learning/</link>
+      <pubDate>Sat, 03 Aug 2019 13:51:40 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/categories/machine-learning/</guid>
       <description></description>
     </item>
     
@@ -35,15 +44,6 @@
       <pubDate>Sat, 13 Jul 2019 18:18:26 +0800</pubDate>
       
       <guid>https://aoiyamada.github.io/categories/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>https://aoiyamada.github.io/categories/machine-learning/</link>
-      <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
-      
-      <guid>https://aoiyamada.github.io/categories/machine-learning/</guid>
       <description></description>
     </item>
     

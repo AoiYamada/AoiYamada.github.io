@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 21 Jul 2019 04:38:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 13:51:40 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>chrome extension</title>
+      <link>https://aoiyamada.github.io/tags/chrome-extension/</link>
+      <pubDate>Sat, 03 Aug 2019 13:51:40 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/chrome-extension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>face-api.js</title>
+      <link>https://aoiyamada.github.io/tags/face-api.js/</link>
+      <pubDate>Sat, 03 Aug 2019 13:51:40 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/face-api.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>face-id</title>
+      <link>https://aoiyamada.github.io/tags/face-id/</link>
+      <pubDate>Sat, 03 Aug 2019 13:51:40 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/face-id/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>https://aoiyamada.github.io/tags/tensorflow/</link>
+      <pubDate>Sat, 03 Aug 2019 13:51:40 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/tensorflow/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>
@@ -161,15 +197,6 @@
       <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
       
       <guid>https://aoiyamada.github.io/tags/nvidia-docker2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tensorflow</title>
-      <link>https://aoiyamada.github.io/tags/tensorflow/</link>
-      <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
-      
-      <guid>https://aoiyamada.github.io/tags/tensorflow/</guid>
       <description></description>
     </item>
     

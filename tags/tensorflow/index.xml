@@ -6,10 +6,19 @@
     <description>Recent content in tensorflow on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 13 Jul 2019 12:53:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 13:51:40 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Face Filter Chrome Extension</title>
+      <link>https://aoiyamada.github.io/posts/face-filter-chrome-extension/</link>
+      <pubDate>Sat, 03 Aug 2019 13:51:40 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/face-filter-chrome-extension/</guid>
+      <description>&lt;p&gt;如果你有無論如何都不想看到的人, 這個Chrome插件可能幫得到你&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Setup Tensorflow Gpu Docker With Jupyter on Ubuntu 紀錄</title>

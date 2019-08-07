@@ -6,10 +6,19 @@
     <description>Recent content in Lab on Wagnaria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 21 Jul 2019 04:38:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 13:51:40 +0800</lastBuildDate>
     
 	<atom:link href="https://aoiyamada.github.io/categories/lab/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Face Filter Chrome Extension</title>
+      <link>https://aoiyamada.github.io/posts/face-filter-chrome-extension/</link>
+      <pubDate>Sat, 03 Aug 2019 13:51:40 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/posts/face-filter-chrome-extension/</guid>
+      <description>&lt;p&gt;如果你有無論如何都不想看到的人, 這個Chrome插件可能幫得到你&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo PWA Setup</title>
