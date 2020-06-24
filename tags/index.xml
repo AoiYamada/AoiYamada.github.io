@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Wagnaria</title>
@@ -138,20 +138,20 @@
     </item>
     
     <item>
-      <title>cuDNN</title>
-      <link>https://aoiyamada.github.io/tags/cudnn/</link>
-      <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
-      
-      <guid>https://aoiyamada.github.io/tags/cudnn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>cuda</title>
       <link>https://aoiyamada.github.io/tags/cuda/</link>
       <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
       
       <guid>https://aoiyamada.github.io/tags/cuda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cuDNN</title>
+      <link>https://aoiyamada.github.io/tags/cudnn/</link>
+      <pubDate>Sat, 13 Jul 2019 12:53:52 +0800</pubDate>
+      
+      <guid>https://aoiyamada.github.io/tags/cudnn/</guid>
       <description></description>
     </item>
     

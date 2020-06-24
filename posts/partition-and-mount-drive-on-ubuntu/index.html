@@ -4,7 +4,7 @@
 <head>
   <title>Partition and Mount Drive on Ubuntu 紀錄 | Wagnaria</title>
   <meta charset="utf-8" />
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.62.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="山田葵" />
   <meta name="description"
@@ -34,7 +34,7 @@
     content="Partition and Mount Drive on Ubuntu 紀錄">
   <meta property="twitter:image" content="/posts/partition-and-mount-drive-on-ubuntu/images/cover.png">
 
-  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.c295b97d8366c45ae968c234676923663c8b48ff7e1ea88aeba885b3a1cf0766.css" />
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.36c71a06bcace0ac78303f01c28ea28e55a88689a976a6fa01d4f3374f5ecfdc.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -121,6 +121,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aoiyamada.github.io/posts/partition-and-mount-drive-on-ubuntu/" />
+<meta property="og:image" content="https://aoiyamada.github.io/posts/partition-and-mount-drive-on-ubuntu/images/cover.png"/>
 <meta property="article:published_time" content="2019-07-13T12:46:02+08:00" />
 <meta property="article:modified_time" content="2019-07-13T12:46:02+08:00" />
 
@@ -248,84 +249,79 @@ if (!doNotTrack) {
   </header>
   <div class="post-content">
     <p>前提: 砌機的人將第二Hard disk(hdd)弄成Window能讀的ntfs格式, 另外有兩個partition, 其中一個是MS Reserved。</p>
-
 <p>目標: 整合第二Hard disk Partitions, format為ext4, mount在/data, current user要有權限操作, 在nautilus加個bookmark</p>
-
 <ol>
-<li><pre><code class="language-sh">df -Th
-</code></pre>
-
-<p>看看目標的Drive是哪個, 有沒有掛載, 我是/dev/sdb1</p></li>
-
-<li><pre><code class="language-sh">unmount /dev/sdb1
-</code></pre></li>
-
-<li><pre><code class="language-sh">sudo -i
-</code></pre>
-
-<p>取得root權限</p></li>
-
-<li><pre><code class="language-sh">parted /dev/sdb
-</code></pre></li>
-
-<li><p>(in parted)
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">df -Th
+</code></pre></div><p>看看目標的Drive是哪個, 有沒有掛載, 我是/dev/sdb1</p>
+</li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">unmount /dev/sdb1
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo -i
+</code></pre></div><p>取得root權限</p>
+</li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">parted /dev/sdb
+</code></pre></div></li>
+<li>
+<p>(in parted)
 print
-看看有甚麼Partitions</p></li>
-
-<li><p>(in parted)
-rm 所有Partitions</p></li>
-
-<li><p>(in parted)
+看看有甚麼Partitions</p>
+</li>
+<li>
+<p>(in parted)
+rm 所有Partitions</p>
+</li>
+<li>
+<p>(in parted)
 mkpart data 2048s 100%
-我也不太清楚為甚麼從2048開始, gpt的table好像需要一些offset, 資料太多時間太少, 改日研究</p></li>
-
-<li><p>mkfs.ext4 /dev/sdb1</p></li>
-
-<li><pre><code class="language-sh">mount /dev/sdb1 /data
-</code></pre>
-
-<p>別人都mount在/mnt, 我也不太清楚直接mount在/data有甚麼不好, 如果有問題到時改回去/mnt,
-然後用ln -s 創建symbolic link</p></li>
-
-<li><pre><code class="language-sh">nano /etc/passwd
-</code></pre>
-
-<p>看看自己用的user叫甚麼, 我是aoi</p></li>
-
-<li><pre><code>chown -R aoi:aoi /data
-</code></pre>
-
-<p>取得folder權限</p></li>
-
-<li><p>設定開機自動掛載
+我也不太清楚為甚麼從2048開始, gpt的table好像需要一些offset, 資料太多時間太少, 改日研究</p>
+</li>
+<li>
+<p>mkfs.ext4 /dev/sdb1</p>
+</li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mount /dev/sdb1 /data
+</code></pre></div><p>別人都mount在/mnt, 我也不太清楚直接mount在/data有甚麼不好, 如果有問題到時改回去/mnt,
+然後用ln -s 創建symbolic link</p>
+</li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">nano /etc/passwd
+</code></pre></div><p>看看自己用的user叫甚麼, 我是aoi</p>
+</li>
+<li>
+<pre><code>chown -R aoi:aoi /data
+</code></pre><p>取得folder權限</p>
+</li>
+<li>
+<p>設定開機自動掛載
 blkid
 看看Partition的UUID
-/dev/sdb1: UUID=&ldquo;xxxxxxxxxx&rdquo; TYPE=&ldquo;ext4&rdquo; PARTLABEL=&ldquo;data&rdquo; PARTUUID=&ldquo;yyyyyyyyyy&rdquo;</p></li>
-
-<li><pre><code class="language-sh">cp /etc/fstab /etc/fstab.old
-</code></pre>
-
-<p>backup 開機掛載設定</p></li>
-
-<li><pre><code class="language-sh">nano /etc/fstab
-</code></pre>
-
-<p>最底新增</p>
-
+/dev/sdb1: UUID=&quot;xxxxxxxxxx&rdquo; TYPE=&quot;ext4&rdquo; PARTLABEL=&quot;data&rdquo; PARTUUID=&quot;yyyyyyyyyy&rdquo;</p>
+</li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cp /etc/fstab /etc/fstab.old
+</code></pre></div><p>backup 開機掛載設定</p>
+</li>
+<li></li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">nano /etc/fstab
+</code></pre></div><p>最底新增</p>
 <pre><code># /data is on /dev/sdb1
 UUID=xxxxxxxxxx       /data   ext4    errors=remount-ro       0       2
-</code></pre>
-
-<p>(到這裡重開機已經看得到/data)</p></li>
-
-<li><p>(回到desktop)
+</code></pre><p>(到這裡重開機已經看得到/data)</p>
+<ol start="15">
+<li>(回到desktop)
 開啟nautilus, 隨便打開一個folder, 用bkspace回到/, 找到/data
-然後bookmark</p></li>
+然後bookmark</li>
 </ol>
-
-<p>note:
-1. lost+found的folder是ext4格式自帶的系統檔的樣子, 盡量不刪除
-2. df -Th 看到的Type是fuseblk就是ntfs</p>
+<p>note:</p>
+<ol>
+<li>lost+found的folder是ext4格式自帶的系統檔的樣子, 盡量不刪除</li>
+<li>df -Th 看到的Type是fuseblk就是ntfs</li>
+</ol>
   </div>
   <div class="share-buttons-wrap">
     

@@ -4,7 +4,7 @@
 <head>
   <title>Hugo Syntax Highlight by Highlight.js 設定紀錄 | Wagnaria</title>
   <meta charset="utf-8" />
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.62.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="山田葵" />
   <meta name="description"
@@ -34,7 +34,7 @@
     content="Hugo Syntax Highlight by Highlight.js 設定紀錄">
   <meta property="twitter:image" content="/posts/hugo-syntax-highlight/images/cover.png">
 
-  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.c295b97d8366c45ae968c234676923663c8b48ff7e1ea88aeba885b3a1cf0766.css" />
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.36c71a06bcace0ac78303f01c28ea28e55a88689a976a6fa01d4f3374f5ecfdc.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -121,6 +121,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aoiyamada.github.io/posts/hugo-syntax-highlight/" />
+<meta property="og:image" content="https://aoiyamada.github.io/posts/hugo-syntax-highlight/images/cover.png"/>
 <meta property="article:published_time" content="2019-07-12T22:42:16+08:00" />
 <meta property="article:modified_time" content="2019-07-12T22:42:16+08:00" />
 
@@ -248,25 +249,17 @@ if (!doNotTrack) {
   </header>
   <div class="post-content">
     <h2 id="step-1">Step 1:</h2>
+<p>新增**/layout/partials/Highlight-js.html**</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> /&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+  <span style="color:#a6e22e">hljs</span>.<span style="color:#a6e22e">initHighlightingOnLoad</span>();
+&lt;/<span style="color:#f92672">script</span>&gt;
 
-<p>新增<strong>/layout/partials/Highlight-js.html</strong></p>
-
-<pre><code class="language-html">&lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/vs2015.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-  hljs.initHighlightingOnLoad();
-&lt;/script&gt;
-
-</code></pre>
-
-<h2 id="step-2">Step 2:</h2>
-
+</code></pre></div><h2 id="step-2">Step 2:</h2>
 <p>在header中加入</p>
-
-<pre><code class="language-html">{{ partial &quot;Highlight-js.html&quot; }}
-</code></pre>
-
-<p>其中css的cdn可以換成不同風格的</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;Highlight-js.html&#34; }}
+</code></pre></div><p>其中css的cdn可以換成不同風格的</p>
   </div>
   <div class="share-buttons-wrap">
     

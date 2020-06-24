@@ -4,7 +4,7 @@
 <head>
   <title>用Regex檢查binary string是否三的倍數 | Wagnaria</title>
   <meta charset="utf-8" />
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.62.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="山田葵" />
   <meta name="description"
@@ -34,7 +34,7 @@
     content="用Regex檢查binary string是否三的倍數">
   <meta property="twitter:image" content="/posts/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/images/cover.png">
 
-  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.c295b97d8366c45ae968c234676923663c8b48ff7e1ea88aeba885b3a1cf0766.css" />
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.36c71a06bcace0ac78303f01c28ea28e55a88689a976a6fa01d4f3374f5ecfdc.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -121,6 +121,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aoiyamada.github.io/posts/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/" />
+<meta property="og:image" content="https://aoiyamada.github.io/posts/check-if-3-divides-a-binary-number-in-string-format-by-finite-state-machine/images/cover.png"/>
 <meta property="article:published_time" content="2019-07-13T18:31:30+08:00" />
 <meta property="article:modified_time" content="2019-07-13T18:31:30+08:00" />
 
@@ -248,53 +249,31 @@ if (!doNotTrack) {
   </header>
   <div class="post-content">
     <p><a href="https://www.codewars.com/kata/54de279df565808f8b00126a">Kata(題目)</a></p>
-
 <p>輸入: String format binary number</p>
-
 <p>輸出: Boolean</p>
-
-<pre><code class="language-js">// Examples (Javascript)
-multipleof3Regex.test('000') // should be true
-multipleof3Regex.test('001') // should be false
-multipleof3Regex.test('011') // should be true
-multipleof3Regex.test('110') // should be true
-multipleof3Regex.test(' abc ') // should be false
-</code></pre>
-
-<h2 id="建立有限狀態機-fsm">建立有限狀態機(FSM)</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Examples (Javascript)
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">multipleof3Regex</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;000&#39;</span>) <span style="color:#75715e">// should be true
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">multipleof3Regex</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;001&#39;</span>) <span style="color:#75715e">// should be false
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">multipleof3Regex</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;011&#39;</span>) <span style="color:#75715e">// should be true
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">multipleof3Regex</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;110&#39;</span>) <span style="color:#75715e">// should be true
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">multipleof3Regex</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39; abc &#39;</span>) <span style="color:#75715e">// should be false
+</span></code></pre></div><h2 id="建立有限狀態機fsm">建立有限狀態機(FSM)</h2>
 <p>設s0, s1, s2三個狀態表示mod3 為0, 1, 2</p>
-
 <p>binary字串中只會有1和／或0</p>
-
 <p>如果在數值x的binary後面增加一個數位0，等同乘2，變成2x</p>
-
 <p>如果新增數位1，等同乘2加1，變成2x+1，</p>
-
 <p>表示從左到右逐個數位看，如果當前&hellip;</p>
-
 <h3 id="在狀態s0時">在狀態s0時</h3>
-
 <p>看到0，保持狀態s0</p>
-
 <p>看到1，更新至狀態s1</p>
-
 <h3 id="在狀態s1時">在狀態s1時</h3>
-
 <p>看到0，更新至狀態s2</p>
-
 <p>看到1，更新至狀態s0</p>
-
 <h3 id="在狀態s2時">在狀態s2時</h3>
-
 <p>看到0，更新至狀態s1</p>
-
 <p>看到1，保持狀態s2</p>
-
-<p><img src="images/fsm.jpg" alt="fsm" /></p>
-
-<p><small><a href="http://ivanzuzak.info/noam/webapps/fsm2regex/">fsm visualization powered by ivanzuzak.info</a></small></p>
-
+<p><img src="images/fsm.jpg" alt="fsm"></p>
+<p><!-- raw HTML omitted --><a href="http://ivanzuzak.info/noam/webapps/fsm2regex/">fsm visualization powered by ivanzuzak.info</a><!-- raw HTML omitted --></p>
 <pre><code>#states
 s0
 s1
@@ -313,27 +292,15 @@ s1:0&gt;s2
 s1:1&gt;s0
 s2:0&gt;s1
 s2:1&gt;s2
-</code></pre>
-
-<p>起始狀態為s0，如果最終狀態回到s0就是3的倍數</p>
-
+</code></pre><p>起始狀態為s0，如果最終狀態回到s0就是3的倍數</p>
 <p>例如12的binary是1100</p>
-
 <p>從左到右的狀態變化為</p>
-
 <p>s0s1s0s0s0，最終是s0所以是3的倍數</p>
-
 <p>14的binary是1110，狀態變化為</p>
-
 <p>s0s1s0s1s2，最終是s2，所以mod3為2</p>
-
 <p>翻譯成regex就是</p>
-
-<pre><code class="language-js">let multipleof3Regex = /^0{0,}(1(01{0,}0|11){0,}10{0,}){0,}$/
-</code></pre>
-
-<h2 id="reference">Reference</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">multipleof3Regex</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/^0{0,}(1(01{0,}0|11){0,}10{0,}){0,}$/</span>
+</code></pre></div><h2 id="reference">Reference</h2>
 <p><a href="https://www.gamedev.net/articles/programming/general-and-gameplay-programming/finite-state-machines-and-regular-expressions-r3176/?fbclid=IwAR07qC0B9WbxlqvrV2hcRgW0oKGAxjQI9Umw8BT2mO2tEoIuYVJZBtXWKgs">FSM &amp; Regex</a></p>
   </div>
   <div class="share-buttons-wrap">

@@ -4,7 +4,7 @@
 <head>
   <title>Mysql Insert Trigger Notes | Wagnaria</title>
   <meta charset="utf-8" />
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.62.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="山田葵" />
   <meta name="description"
@@ -34,7 +34,7 @@
     content="Mysql Insert Trigger Notes">
   <meta property="twitter:image" content="/posts/mysql-insert-trigger-notes/images/cover.png">
 
-  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.c295b97d8366c45ae968c234676923663c8b48ff7e1ea88aeba885b3a1cf0766.css" />
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.36c71a06bcace0ac78303f01c28ea28e55a88689a976a6fa01d4f3374f5ecfdc.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -121,6 +121,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aoiyamada.github.io/posts/mysql-insert-trigger-notes/" />
+<meta property="og:image" content="https://aoiyamada.github.io/posts/mysql-insert-trigger-notes/images/cover.png"/>
 <meta property="article:published_time" content="2019-07-10T01:28:36+08:00" />
 <meta property="article:modified_time" content="2019-07-10T01:28:36+08:00" />
 
@@ -248,34 +249,25 @@ if (!doNotTrack) {
   </header>
   <div class="post-content">
     <h2 id="insert一筆資料前trigger事件">INSERT一筆資料前TRIGGER事件</h2>
-
 <p>例如將新增的ROW的其中一個FIELD設成AUTO_INCREMENT</p>
-
-<pre><code class="language-SQL">CREATE TRIGGER 
-	`priority_trigger` 
-BEFORE INSERT ON 
-	`banner` 
-FOR EACH ROW SET 
-    NEW.priority = IFNULL((
-		SELECT 
-			`AUTO_INCREMENT`
-		FROM
-			`information_schema`.`TABLES`
-		WHERE
-			`TABLE_SCHEMA` = 'schema'
-				AND `TABLE_NAME` = 'table'
-	), 1);
-</code></pre>
-
-<h2 id="檢視triggers">檢視TRIGGERS</h2>
-
-<pre><code class="language-SQL">SHOW TRIGGERS;
-</code></pre>
-
-<p>注意:</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TRIGGER</span> 
+	<span style="color:#f92672">`</span>priority_trigger<span style="color:#f92672">`</span> 
+<span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">ON</span> 
+	<span style="color:#f92672">`</span>banner<span style="color:#f92672">`</span> 
+<span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span> <span style="color:#66d9ef">SET</span> 
+    <span style="color:#66d9ef">NEW</span>.priority <span style="color:#f92672">=</span> IFNULL((
+		<span style="color:#66d9ef">SELECT</span> 
+			<span style="color:#f92672">`</span>AUTO_INCREMENT<span style="color:#f92672">`</span>
+		<span style="color:#66d9ef">FROM</span>
+			<span style="color:#f92672">`</span>information_schema<span style="color:#f92672">`</span>.<span style="color:#f92672">`</span>TABLES<span style="color:#f92672">`</span>
+		<span style="color:#66d9ef">WHERE</span>
+			<span style="color:#f92672">`</span>TABLE_SCHEMA<span style="color:#f92672">`</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">schema</span><span style="color:#e6db74">&#39;</span>
+				<span style="color:#66d9ef">AND</span> <span style="color:#f92672">`</span><span style="color:#66d9ef">TABLE_NAME</span><span style="color:#f92672">`</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">table</span><span style="color:#e6db74">&#39;</span>
+	), <span style="color:#ae81ff">1</span>);
+</code></pre></div><h2 id="檢視triggers">檢視TRIGGERS</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">SHOW</span> TRIGGERS;
+</code></pre></div><p>注意:</p>
 <p>TRIGGER是平行運行的, 做多行輸入時,</p>
-
 <p>上面的NEW.priority可能會發生一些奇怪問題。</p>
   </div>
   <div class="share-buttons-wrap">

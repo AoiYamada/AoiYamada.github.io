@@ -4,7 +4,7 @@
 <head>
   <title>Face Filter Chrome Extension | Wagnaria</title>
   <meta charset="utf-8" />
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.62.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="山田葵" />
   <meta name="description"
@@ -34,7 +34,7 @@
     content="如果你有無論如何都不想看到的人, 這個Chrome插件可能幫得到你">
   <meta property="twitter:image" content="/posts/face-filter-chrome-extension/images/cover.jpg">
 
-  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.c295b97d8366c45ae968c234676923663c8b48ff7e1ea88aeba885b3a1cf0766.css" />
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.36c71a06bcace0ac78303f01c28ea28e55a88689a976a6fa01d4f3374f5ecfdc.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -121,6 +121,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="如果你有無論如何都不想看到的人, 這個Chrome插件可能幫得到你" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aoiyamada.github.io/posts/face-filter-chrome-extension/" />
+<meta property="og:image" content="https://aoiyamada.github.io/posts/face-filter-chrome-extension/images/cover.jpg"/>
 <meta property="article:published_time" content="2019-08-03T13:51:40+08:00" />
 <meta property="article:modified_time" content="2019-08-03T13:51:40+08:00" />
 
@@ -248,61 +249,60 @@ if (!doNotTrack) {
   </header>
   <div class="post-content">
     <p>如果你有無論如何都不想看到的人, 這個Chrome插件可能幫得到你</p>
-
-<h2 id="facefilter-https-github-com-aoiyamada-facefilter"><a href="https://github.com/AoiYamada/FaceFilter">FaceFilter</a></h2>
-
+<h2 id="facefilterhttpsgithubcomaoiyamadafacefilter"><a href="https://github.com/AoiYamada/FaceFilter">FaceFilter</a></h2>
 <p>寫這個插件主要是用來學寫Chrome插件和學習<a href="https://github.com/justadudewhohacks/face-api.js">faceapi.js</a>的, 花兩天東拼西湊並沒有優化, 圖片臉部多時有延遲, 使用方法也不友善。如果沒人有興趣大概不會再修改。</p>
-
 <h2 id="使用方法">使用方法</h2>
-
 <ol>
-<li><p>下載並解壓<a href="https://github.com/AoiYamada/FaceFilter">FaceFilter</a></p></li>
-
-<li><p>到Chrome右上角選單, 選更多工具&gt;擴充功能, 打開開發者模式</p></li>
-
-<li><p>點左上角載入未封裝項目, 選擇剛才解壓的資料夾</p></li>
+<li>
+<p>下載並解壓<a href="https://github.com/AoiYamada/FaceFilter">FaceFilter</a></p>
+</li>
+<li>
+<p>到Chrome右上角選單, 選更多工具&gt;擴充功能, 打開開發者模式</p>
+</li>
+<li>
+<p>點左上角載入未封裝項目, 選擇剛才解壓的資料夾</p>
+</li>
 </ol>
-
 <p>如果只是想用預設的數據, 到這邊已經可以了, 效果如下:</p>
-
-<p><img src="./images/cover.jpg" alt="Demo" /></p>
-
+<p><img src="./images/cover.jpg" alt="Demo"></p>
 <h2 id="客製化">客製化</h2>
-
 <ol>
-<li><p>在face filter的asset folder下創建你不想看到的人的名字(下稱X)的Folder</p></li>
-
-<li><p>收集X的臉部不同角度的相片, 存檔為以數字0開始編號命名的JPG</p></li>
-
-<li><p>修改<strong>background.js</strong>的trainingMode為true</p></li>
-
-<li><p>修改<strong>background.js</strong>中 loadLabeledImages 中的 &ldquo;36&rdquo;, 改成X的臉部圖片數目</p></li>
-
-<li><p>重新載入插件</p></li>
+<li>
+<p>在face filter的asset folder下創建你不想看到的人的名字(下稱X)的Folder</p>
+</li>
+<li>
+<p>收集X的臉部不同角度的相片, 存檔為以數字0開始編號命名的JPG</p>
+</li>
+<li>
+<p>修改<strong>background.js</strong>的trainingMode為true</p>
+</li>
+<li>
+<p>修改<strong>background.js</strong>中 loadLabeledImages 中的 &ldquo;36&rdquo;, 改成X的臉部圖片數目</p>
+</li>
+<li>
+<p>重新載入插件</p>
+</li>
 </ol>
-
 <p>到這邊已經能運作了, 如果發現有認不到的臉就把他加進asset中, 像PsychoPass的西比拉系統一樣營運就對了</p>
-
 <h2 id="加速">加速</h2>
-
 <p>隨著訓練圖片(asset)增加, 插件啟動速度明顯下降, 以下是加速方法</p>
-
 <ol>
-<li><p>打開插件的背景console</p></li>
-
-<li><p>複製訓練結果的JSON字串</p></li>
-
-<li><p>以該JSON取代<strong>background.js</strong>的data</p></li>
-
-<li><p>修改<strong>background.js</strong>的trainingMode為false</p></li>
+<li>
+<p>打開插件的背景console</p>
+</li>
+<li>
+<p>複製訓練結果的JSON字串</p>
+</li>
+<li>
+<p>以該JSON取代<strong>background.js</strong>的data</p>
+</li>
+<li>
+<p>修改<strong>background.js</strong>的trainingMode為false</p>
+</li>
 </ol>
-
 <h2 id="感想">感想</h2>
-
-<p>現在AI技術日新月異, 用我這種中古電腦一樣能進行人臉識別(因為識別模型已有人訓練好, 而且公開免費), 配合不同模型還能識別不同物品。 如果香港的燈柱都加裝鏡頭, 就算燈柱本身不加入人臉識別功能, 影片一樣可以分析, 到時每個人在甚麼時間去了哪裡買了甚麼連同人際關係也將一覽無遺。不論會不會有人用這些資料作惡, 從早到晚都被監視著感覺也不太好。</p>
-
+<p>現在AI技術日新月異, 用我這種中古電腦一樣能進行人臉識別(因為識別模型已有人訓練好, 而且公開免費), 配合不同模型還能識別不同物品。 如果香港的燈柱都加裝鏡頭, 就算燈柱本身不加入AI識別功能, 影片一樣可以分析, 到時每個人在甚麼時間去了哪裡買了甚麼連同人際關係也一覽無遺, 也可能意外地拍到別人解鎖電子設備的密碼, 或者是一些付款連結, 並非如某些官員所說般沒有疑慮, 如果資料外洩或內部人員用資料作惡, 後果難以估計。</p>
 <h2 id="reference">Reference</h2>
-
 <p><a href="https://www.facebook.com/PCRMeme/photos/a.311899382844503/366641727370268/?type=1&amp;theater">非公開Chrome插件安裝教學</a></p>
   </div>
   <div class="share-buttons-wrap">

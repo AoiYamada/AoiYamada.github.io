@@ -4,7 +4,7 @@
 <head>
   <title>Hugo PWA Setup | Wagnaria</title>
   <meta charset="utf-8" />
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.62.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="山田葵" />
   <meta name="description"
@@ -40,7 +40,7 @@
 然後騙客戶把APP做出來了(X">
   <meta property="twitter:image" content="/posts/hugo-pwa-setup/images/cover.png">
 
-  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.c295b97d8366c45ae968c234676923663c8b48ff7e1ea88aeba885b3a1cf0766.css" />
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.36c71a06bcace0ac78303f01c28ea28e55a88689a976a6fa01d4f3374f5ecfdc.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -131,6 +131,7 @@ if (!doNotTrack) {
 然後騙客戶把APP做出來了(X" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aoiyamada.github.io/posts/hugo-pwa-setup/" />
+<meta property="og:image" content="https://aoiyamada.github.io/posts/hugo-pwa-setup/images/cover.png"/>
 <meta property="article:published_time" content="2019-07-21T04:38:05+08:00" />
 <meta property="article:modified_time" content="2019-07-21T04:38:05+08:00" />
 
@@ -260,149 +261,127 @@ if (!doNotTrack) {
     <p>有些客戶想要自己的業務APP, 但只是想將公司手機版網站打包成APP,
 這情況比起另外開發一個APP, 把網站加工成Progressive Web App (PWA)更省時費力,
 然後騙客戶把APP做出來了(X</p>
-
 <h2 id="step-1-新增導入-pwa-的script">Step 1: 新增導入 PWA 的Script</h2>
-
 <p><strong>layouts/partials/pwa.html</strong></p>
-
-<pre><code class="language-html">&lt;meta name=”apple-mobile-web-app-capable” content=”yes”&gt;
-&lt;script&gt;
-  // Check that service workers are registered
-  if ('serviceWorker' in navigator) {
-    // Use the window load event to keep the page load performant
-    window.addEventListener('load', () =&gt; {
-      navigator.serviceWorker.register('/service-worker.js');
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">”apple-mobile-web-app-capable”</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">”yes”</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+  <span style="color:#75715e">// Check that service workers are registered
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#39;serviceWorker&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">navigator</span>) {
+    <span style="color:#75715e">// Use the window load event to keep the page load performant
+</span><span style="color:#75715e"></span>    window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;load&#39;</span>, () =&gt; {
+      <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">serviceWorker</span>.<span style="color:#a6e22e">register</span>(<span style="color:#e6db74">&#39;/service-worker.js&#39;</span>);
     });
   }
-&lt;/script&gt;
-</code></pre>
-
-<p>然後在 <strong>layouts/_default/baseof.html</strong> 的header加入</p>
-
-<pre><code class="language-html">{{ partial &quot;pwa.html&quot; }}
-</code></pre>
-
-<h2 id="step-2-新增-manifest">Step 2: 新增 Manifest</h2>
-
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>然後在 <strong>layouts/_default/baseof.html</strong> 的header加入</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;pwa.html&#34; }}
+</code></pre></div><h2 id="step-2-新增-manifest">Step 2: 新增 Manifest</h2>
 <p>用線上 favicon generator基本會自動生成出來</p>
-
 <p><strong>static/manifest.json</strong></p>
-
-<pre><code class="language-json">{
-  &quot;short_name&quot;: &quot;Wagnaria&quot;,
-  &quot;name&quot;: &quot;Wagnaria&quot;,
-  &quot;icons&quot;: [
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;short_name&#34;</span>: <span style="color:#e6db74">&#34;Wagnaria&#34;</span>,
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Wagnaria&#34;</span>,
+  <span style="color:#f92672">&#34;icons&#34;</span>: [
     {
-      &quot;src&quot;: &quot;\/favicon\/android-icon-36x36.png&quot;,
-      &quot;sizes&quot;: &quot;36x36&quot;,
-      &quot;type&quot;: &quot;image\/png&quot;,
-      &quot;density&quot;: &quot;0.75&quot;
+      <span style="color:#f92672">&#34;src&#34;</span>: <span style="color:#e6db74">&#34;\/favicon\/android-icon-36x36.png&#34;</span>,
+      <span style="color:#f92672">&#34;sizes&#34;</span>: <span style="color:#e6db74">&#34;36x36&#34;</span>,
+      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;image\/png&#34;</span>,
+      <span style="color:#f92672">&#34;density&#34;</span>: <span style="color:#e6db74">&#34;0.75&#34;</span>
     },
     {
-      &quot;src&quot;: &quot;\/favicon\/android-icon-48x48.png&quot;,
-      &quot;sizes&quot;: &quot;48x48&quot;,
-      &quot;type&quot;: &quot;image\/png&quot;,
-      &quot;density&quot;: &quot;1.0&quot;
+      <span style="color:#f92672">&#34;src&#34;</span>: <span style="color:#e6db74">&#34;\/favicon\/android-icon-48x48.png&#34;</span>,
+      <span style="color:#f92672">&#34;sizes&#34;</span>: <span style="color:#e6db74">&#34;48x48&#34;</span>,
+      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;image\/png&#34;</span>,
+      <span style="color:#f92672">&#34;density&#34;</span>: <span style="color:#e6db74">&#34;1.0&#34;</span>
     },
     {
-      &quot;src&quot;: &quot;\/favicon\/android-icon-72x72.png&quot;,
-      &quot;sizes&quot;: &quot;72x72&quot;,
-      &quot;type&quot;: &quot;image\/png&quot;,
-      &quot;density&quot;: &quot;1.5&quot;
+      <span style="color:#f92672">&#34;src&#34;</span>: <span style="color:#e6db74">&#34;\/favicon\/android-icon-72x72.png&#34;</span>,
+      <span style="color:#f92672">&#34;sizes&#34;</span>: <span style="color:#e6db74">&#34;72x72&#34;</span>,
+      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;image\/png&#34;</span>,
+      <span style="color:#f92672">&#34;density&#34;</span>: <span style="color:#e6db74">&#34;1.5&#34;</span>
     },
     {
-      &quot;src&quot;: &quot;\/favicon\/android-icon-96x96.png&quot;,
-      &quot;sizes&quot;: &quot;96x96&quot;,
-      &quot;type&quot;: &quot;image\/png&quot;,
-      &quot;density&quot;: &quot;2.0&quot;
+      <span style="color:#f92672">&#34;src&#34;</span>: <span style="color:#e6db74">&#34;\/favicon\/android-icon-96x96.png&#34;</span>,
+      <span style="color:#f92672">&#34;sizes&#34;</span>: <span style="color:#e6db74">&#34;96x96&#34;</span>,
+      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;image\/png&#34;</span>,
+      <span style="color:#f92672">&#34;density&#34;</span>: <span style="color:#e6db74">&#34;2.0&#34;</span>
     },
     {
-      &quot;src&quot;: &quot;\/favicon\/android-icon-144x144.png&quot;,
-      &quot;sizes&quot;: &quot;144x144&quot;,
-      &quot;type&quot;: &quot;image\/png&quot;,
-      &quot;density&quot;: &quot;3.0&quot;
+      <span style="color:#f92672">&#34;src&#34;</span>: <span style="color:#e6db74">&#34;\/favicon\/android-icon-144x144.png&#34;</span>,
+      <span style="color:#f92672">&#34;sizes&#34;</span>: <span style="color:#e6db74">&#34;144x144&#34;</span>,
+      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;image\/png&#34;</span>,
+      <span style="color:#f92672">&#34;density&#34;</span>: <span style="color:#e6db74">&#34;3.0&#34;</span>
     },
     {
-      &quot;src&quot;: &quot;\/favicon\/android-icon-192x192.png&quot;,
-      &quot;sizes&quot;: &quot;192x192&quot;,
-      &quot;type&quot;: &quot;image\/png&quot;,
-      &quot;density&quot;: &quot;4.0&quot;
+      <span style="color:#f92672">&#34;src&#34;</span>: <span style="color:#e6db74">&#34;\/favicon\/android-icon-192x192.png&#34;</span>,
+      <span style="color:#f92672">&#34;sizes&#34;</span>: <span style="color:#e6db74">&#34;192x192&#34;</span>,
+      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;image\/png&#34;</span>,
+      <span style="color:#f92672">&#34;density&#34;</span>: <span style="color:#e6db74">&#34;4.0&#34;</span>
     },
     {
-      &quot;src&quot;: &quot;\/favicon\/favicon-512x512.png&quot;,
-      &quot;sizes&quot;: &quot;512x512&quot;,
-      &quot;type&quot;: &quot;image\/png&quot;,
-      &quot;density&quot;: &quot;5.0&quot;
+      <span style="color:#f92672">&#34;src&#34;</span>: <span style="color:#e6db74">&#34;\/favicon\/favicon-512x512.png&#34;</span>,
+      <span style="color:#f92672">&#34;sizes&#34;</span>: <span style="color:#e6db74">&#34;512x512&#34;</span>,
+      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;image\/png&#34;</span>,
+      <span style="color:#f92672">&#34;density&#34;</span>: <span style="color:#e6db74">&#34;5.0&#34;</span>
     }
   ],
-  &quot;start_url&quot;: &quot;/?source=pwa&quot;,
-  &quot;background_color&quot;: &quot;#001020&quot;,
-  &quot;display&quot;: &quot;standalone&quot;,
-  &quot;theme_color&quot;: &quot;#001020&quot;
+  <span style="color:#f92672">&#34;start_url&#34;</span>: <span style="color:#e6db74">&#34;/?source=pwa&#34;</span>,
+  <span style="color:#f92672">&#34;background_color&#34;</span>: <span style="color:#e6db74">&#34;#001020&#34;</span>,
+  <span style="color:#f92672">&#34;display&#34;</span>: <span style="color:#e6db74">&#34;standalone&#34;</span>,
+  <span style="color:#f92672">&#34;theme_color&#34;</span>: <span style="color:#e6db74">&#34;#001020&#34;</span>
 }
-</code></pre>
-
-<h2 id="step-3-新增-service-worker">Step 3: 新增 Service Worker</h2>
-
+</code></pre></div><h2 id="step-3-新增-service-worker">Step 3: 新增 Service Worker</h2>
 <p><strong>static/service-worker.js</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// https://developers.google.com/web/tools/workbox/guides/get-started
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">importScripts</span>(<span style="color:#e6db74">&#39;https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js&#39;</span>);
 
-<pre><code class="language-js">// https://developers.google.com/web/tools/workbox/guides/get-started
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
-
-if (workbox) {
-  console.log(`Yay! Workbox is loaded 🎉`);
-  workbox.routing.registerRoute(
-    new RegExp(/\/.*/),
-    workbox.strategies.networkFirst()
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">workbox</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">Yay! Workbox is loaded 🎉</span><span style="color:#e6db74">`</span>);
+  <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">routing</span>.<span style="color:#a6e22e">registerRoute</span>(
+    <span style="color:#66d9ef">new</span> RegExp(<span style="color:#e6db74">/\/.*/</span>),
+    <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">strategies</span>.<span style="color:#a6e22e">networkFirst</span>()
   );
 
-  workbox.routing.registerRoute(
-    // Cache CSS files
-    /.*\.css/,
-    // Use cache but update in the background ASAP
-    workbox.strategies.staleWhileRevalidate({
-      // Use a custom cache name
-      cacheName: 'css-cache',
+  <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">routing</span>.<span style="color:#a6e22e">registerRoute</span>(
+    <span style="color:#75715e">// Cache CSS files
+</span><span style="color:#75715e"></span>    <span style="color:#e6db74">/.*\.css/</span>,
+    <span style="color:#75715e">// Use cache but update in the background ASAP
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">strategies</span>.<span style="color:#a6e22e">staleWhileRevalidate</span>({
+      <span style="color:#75715e">// Use a custom cache name
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">cacheName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;css-cache&#39;</span>,
     })
   );
 
-  workbox.routing.registerRoute(
-    // Cache image files
-    /.*\.(?:png|jpg|jpeg|svg|gif)|https:\/\/www\.codewars\.com\/users\/AoiYamada\/badges\/micro/,
-    // Use the cache if it's available
-    workbox.strategies.cacheFirst({
-      // Use a custom cache name
-      cacheName: 'image-cache',
-      plugins: [
-        new workbox.expiration.Plugin({
-          // Cache only 20 images
-          maxEntries: 20,
-          // Cache for a maximum of a week
-          maxAgeSeconds: 7 * 24 * 60 * 60,
+  <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">routing</span>.<span style="color:#a6e22e">registerRoute</span>(
+    <span style="color:#75715e">// Cache image files
+</span><span style="color:#75715e"></span>    <span style="color:#e6db74">/.*\.(?:png|jpg|jpeg|svg|gif)|https:\/\/www\.codewars\.com\/users\/AoiYamada\/badges\/micro/</span>,
+    <span style="color:#75715e">// Use the cache if it&#39;s available
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">strategies</span>.<span style="color:#a6e22e">cacheFirst</span>({
+      <span style="color:#75715e">// Use a custom cache name
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">cacheName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;image-cache&#39;</span>,
+      <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">expiration</span>.<span style="color:#a6e22e">Plugin</span>({
+          <span style="color:#75715e">// Cache only 20 images
+</span><span style="color:#75715e"></span>          <span style="color:#a6e22e">maxEntries</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>,
+          <span style="color:#75715e">// Cache for a maximum of a week
+</span><span style="color:#75715e"></span>          <span style="color:#a6e22e">maxAgeSeconds</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">24</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>,
         })
       ],
     })
   );
-} else {
-  console.log(`Boo! Workbox didn't load 😬`);
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">Boo! Workbox didn&#39;t load 😬</span><span style="color:#e6db74">`</span>);
 }
-</code></pre>
-
-<h2 id="完成">完成</h2>
-
+</code></pre></div><h2 id="完成">完成</h2>
 <p>接下來用移動設備打開網站時,
 Android會詢問是否安裝到桌面,
 IOS需要手動在Safari按新增到桌面</p>
-
 <p>上架支援方面目前還不是很完善, 粗略看了一下,
 Play Store上架需要外包一層JAVA APP,
 App Store暫時不支援</p>
-
 <p>不過製作 PWA 形式的APP是網站開發的趨勢,
 相信 PWA 很快就能在所有平台無痛上架</p>
-
 <h2 id="references">References</h2>
-
 <ol>
 <li><a href="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=zh-tw">你的首個 Progressive Web App | Web Fundamentals | Google Developers</a></li>
 <li><a href="https://developers.google.com/web/tools/workbox/guides/get-started?hl=zh-tw"> Workbox 使用入門 |  Google Developers</a></li>

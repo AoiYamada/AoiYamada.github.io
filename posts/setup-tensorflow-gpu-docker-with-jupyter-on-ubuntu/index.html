@@ -4,7 +4,7 @@
 <head>
   <title>Setup Tensorflow Gpu Docker With Jupyter on Ubuntu 紀錄 | Wagnaria</title>
   <meta charset="utf-8" />
-  <meta name="generator" content="Hugo 0.56.3" />
+  <meta name="generator" content="Hugo 0.62.2" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="山田葵" />
   <meta name="description"
@@ -34,7 +34,7 @@
     content="Setup Tensorflow Gpu Docker With Jupyter on Ubuntu 紀錄">
   <meta property="twitter:image" content="/posts/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/images/cover.png">
 
-  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.c295b97d8366c45ae968c234676923663c8b48ff7e1ea88aeba885b3a1cf0766.css" />
+  <link rel="stylesheet" href="https://aoiyamada.github.io/css/main.min.36c71a06bcace0ac78303f01c28ea28e55a88689a976a6fa01d4f3374f5ecfdc.css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
@@ -121,6 +121,7 @@ if (!doNotTrack) {
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aoiyamada.github.io/posts/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/" />
+<meta property="og:image" content="https://aoiyamada.github.io/posts/setup-tensorflow-gpu-docker-with-jupyter-on-ubuntu/images/cover.png"/>
 <meta property="article:published_time" content="2019-07-13T12:53:52+08:00" />
 <meta property="article:modified_time" content="2019-07-13T12:53:52+08:00" />
 
@@ -248,76 +249,53 @@ if (!doNotTrack) {
   </header>
   <div class="post-content">
     <h2 id="nvidia-driver-upgrade">Nvidia driver upgrade</h2>
-
 <p><a href="https://www.maketecheasier.com/install-nvidia-drivers-ubuntu/">Upgrade nvidia dirver</a></p>
-
-<pre><code class="language-sh">sudo add-apt-repository ppa:graphics-drivers/ppa
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 sudo apt upgrade
-</code></pre>
-
-<p>加了NVIDIA的Repo後就可以在更新Driver那裡更新了</p>
-
+</code></pre></div><p>加了NVIDIA的Repo後就可以在更新Driver那裡更新了</p>
 <h2 id="install-cudnn">Install cuDNN</h2>
-
 <p>去nvidia官網找個package安裝, 注意要對應cuda ver, 目前我用cuda 10.2, cudnn 7.6</p>
-
-<h2 id="setup-nvidia-cuda環境-https-github-com-nvidia-nvidia-docker"><a href="https://github.com/NVIDIA/nvidia-docker">Setup nvidia cuda環境</a></h2>
-
-<pre><code class="language-sh"># If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers
-docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
+<h2 id="setup-nvidia-cuda環境httpsgithubcomnvidianvidia-docker"><a href="https://github.com/NVIDIA/nvidia-docker">Setup nvidia cuda環境</a></h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers</span>
+docker volume ls -q -f driver<span style="color:#f92672">=</span>nvidia-docker | xargs -r -I<span style="color:#f92672">{</span><span style="color:#f92672">}</span> -n1 docker ps -q -a -f volume<span style="color:#f92672">=</span><span style="color:#f92672">{</span><span style="color:#f92672">}</span> | xargs -r docker rm -f
 sudo apt-get purge -y nvidia-docker
 
-# Add the package repositories
-curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
-  sudo apt-key add -
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
-  sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+<span style="color:#75715e"># Add the package repositories</span>
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  sudo apt-key add -
+distribution<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>. /etc/os-release;echo $ID$VERSION_ID<span style="color:#66d9ef">)</span>
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 sudo apt-get update
 
-# Install nvidia-docker2 and reload the Docker daemon configuration
+<span style="color:#75715e"># Install nvidia-docker2 and reload the Docker daemon configuration</span>
 sudo apt-get install -y nvidia-docker2
 sudo pkill -SIGHUP dockerd
-</code></pre>
-
-<p>中間會問daemon跟tensorflow setting還是用自己的,
+</code></pre></div><p>中間會問daemon跟tensorflow setting還是用自己的,
 先backup自己的再merge, eg.</p>
-
-<pre><code class="language-json">{
-    &quot;storage-driver&quot;: &quot;overlay2&quot;,
-    &quot;data-root&quot;: &quot;/data/Docker&quot;,
-    &quot;runtimes&quot;: {
-        &quot;nvidia&quot;: {
-            &quot;path&quot;: &quot;nvidia-container-runtime&quot;,
-            &quot;runtimeArgs&quot;: []
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;storage-driver&#34;</span>: <span style="color:#e6db74">&#34;overlay2&#34;</span>,
+    <span style="color:#f92672">&#34;data-root&#34;</span>: <span style="color:#e6db74">&#34;/data/Docker&#34;</span>,
+    <span style="color:#f92672">&#34;runtimes&#34;</span>: {
+        <span style="color:#f92672">&#34;nvidia&#34;</span>: {
+            <span style="color:#f92672">&#34;path&#34;</span>: <span style="color:#e6db74">&#34;nvidia-container-runtime&#34;</span>,
+            <span style="color:#f92672">&#34;runtimeArgs&#34;</span>: []
         }
     }
 }
-</code></pre>
-
-<p>Optional:</p>
-
-<pre><code class="language-sh"># Test nvidia-smi with the latest official CUDA image
-docker run --runtime=nvidia --rm nvidia/cuda:10.1-base nvidia-smi
-</code></pre>
-
-<p>背景運行tensorflow container, 選了py3和jupyter環境, runtime選nvidia啟用GPU</p>
-
-<pre><code class="language-sh">docker run --runtime nvidia --name tf -d --rm -v /data/workspace/DockerVolume/Notebooks:/tf/notebooks -p 8888:8888 tensorflow/tensorflow:nightly-gpu-py3-jupyter
-</code></pre>
-
-<p>進入jupyter notebook需要token, 這邊看</p>
-
-<pre><code class="language-sh">docker logs tf
-</code></pre>
-
-<p>檢查tf version &amp; 是不是在用GPU</p>
-
-<pre><code class="language-python">import tensorflow as tf
-print(tf.__version__)
-tf.test.gpu_device_name()
-</code></pre>
+</code></pre></div><p>Optional:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Test nvidia-smi with the latest official CUDA image</span>
+docker run --runtime<span style="color:#f92672">=</span>nvidia --rm nvidia/cuda:10.1-base nvidia-smi
+</code></pre></div><p>背景運行tensorflow container, 選了py3和jupyter環境, runtime選nvidia啟用GPU</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run --runtime nvidia --name tf -d --rm -v /data/workspace/DockerVolume/Notebooks:/tf/notebooks -p 8888:8888 tensorflow/tensorflow:nightly-gpu-py3-jupyter
+</code></pre></div><p>進入jupyter notebook需要token, 這邊看</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker logs tf
+</code></pre></div><p>檢查tf version &amp; 是不是在用GPU</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> tensorflow <span style="color:#f92672">as</span> tf
+<span style="color:#66d9ef">print</span>(tf<span style="color:#f92672">.</span>__version__)
+tf<span style="color:#f92672">.</span>test<span style="color:#f92672">.</span>gpu_device_name()
+</code></pre></div>
   </div>
   <div class="share-buttons-wrap">
     
